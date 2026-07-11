@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/*
+  STUDIO SORREL - design tokens
+  Single locked "warm paper" editorial theme (light only, print-emulating).
+  Palette: warm off-white, sand, stone, taupe, deep brown, charcoal, warm ink,
+  and a single muted olive accent used sparingly and consistently page-wide.
+*/
+
+@theme {
+  /* Neutrals (warm) */
+  --color-canvas: #f4f0e8; /* page background - warm off-white paper */
+  --color-sand: #ebe3d6; /* soft section tint */
+  --color-stone: #dccfbd; /* hairlines, muted fields */
+  --color-taupe: #6d6152; /* secondary / meta text - AA on canvas & sand */
+  --color-brown: #4a3f34; /* deep brown - body copy */
+  --color-charcoal: #33302a; /* dark band background */
+  --color-ink: #201d18; /* primary text + darkest surface */
+
+  /* Single accent - muted olive (AA as text on canvas & sand) */
+  --color-olive: #605d37;
+  --color-olive-soft: #8a8558; /* olive on dark surfaces */
+
+  /* Radius - near-sharp, architectural */
+  --radius: 2px;
+
+  /* Fluid section rhythm (VISUAL_DENSITY 3, gallery-airy) */
+  --spacing-section: clamp(6rem, 12vw, 11rem);
+  --spacing-gutter: clamp(1.25rem, 5vw, 4rem);
+}
+
+/* Fonts are injected by next/font as CSS variables; alias them here so
+   Tailwind generates `font-display` and `font-sans` utilities. */
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-archivo);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* Anchored sections clear the fixed header when navigated to. */
+  section[id],
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    background-color: var(--color-olive);
+    color: var(--color-canvas);
+  }
+
+  /* Consistent, visible focus for keyboard users (WCAG) */
+  :focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Small uppercase editorial label (used sparingly - max 1 per 3 sections) */
+  .label-eyebrow {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}

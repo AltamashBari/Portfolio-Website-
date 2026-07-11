@@ -1,0 +1,94 @@
+/**
+ * Shared content types for the Altamash Bari architecture portfolio.
+ * Display content is authored in lib/projects.ts and lib/content.ts.
+ */
+
+export type ProjectStatus = "Completed" | "In Progress" | "Concept" | "Design Development";
+
+export type ProjectCategory =
+  | "Institutional"
+  | "Transit"
+  | "Commercial"
+  | "Residential"
+  | "Hospitality"
+  | "Interior"
+  | "Cultural";
+
+export interface ProjectImage {
+  /** Local path like /portfolio/{slug}/cover.jpg */
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** Optional short caption shown beneath drawing/render sheets. */
+  caption?: string;
+}
+
+/** A single editorial narrative block on the case-study page. */
+export interface StoryBlock {
+  heading?: string;
+  body: string;
+}
+
+export interface ProjectSpec {
+  label: string;
+  value: string;
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  category: ProjectCategory;
+  location: string;
+  year: string;
+  status: ProjectStatus;
+  featured: boolean;
+  /** One line used on cards and listings. */
+  summary: string;
+  /** Opening paragraph on the case-study page. */
+  intro: string;
+  cover: ProjectImage;
+  gallery: ProjectImage[];
+  story: StoryBlock[];
+  specs: ProjectSpec[];
+}
+
+export interface Capability {
+  title: string;
+  description: string;
+}
+
+export interface ExperienceItem {
+  role: string;
+  organisation: string;
+  location: string;
+  period: string;
+  detail: string;
+}
+
+export interface Stat {
+  value: string;
+  suffix?: string;
+  label: string;
+}
+
+export interface Certification {
+  title: string;
+  organisation: string;
+  year: string;
+}
+
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+export interface SocialLink {
+  label: string;
+  href: string;
+}
