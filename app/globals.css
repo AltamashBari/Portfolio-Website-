@@ -59,6 +59,13 @@
     font-family: var(--font-display), ui-serif, Georgia, serif;
     font-weight: 500;
     letter-spacing: -0.01em;
+    /* Balanced rag on multi-line headings (no-op where unsupported). */
+    text-wrap: balance;
+  }
+
+  /* Avoid single-word last lines in body copy (no-op where unsupported). */
+  p {
+    text-wrap: pretty;
   }
 
   /* Anchored sections clear the fixed header when navigated to. */
@@ -76,6 +83,31 @@
   :focus-visible {
     outline: 2px solid var(--color-olive);
     outline-offset: 3px;
+  }
+
+  /* Print (used by the /resume page's "Print / Save as PDF"). */
+  @media print {
+    header,
+    footer,
+    .print\:hidden {
+      display: none !important;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+    }
+
+    .resume-hero {
+      background: #fff !important;
+      padding-top: 2rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    .resume-hero,
+    .resume-hero * {
+      color: #201d18 !important;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

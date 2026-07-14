@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified: now, changeFrequency: "monthly", priority: 1 },
     { url: `${SITE_URL}/projects`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/resume`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = getAllSlugs().map((slug) => ({
