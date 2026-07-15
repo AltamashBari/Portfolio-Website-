@@ -19,8 +19,8 @@ export function About() {
             <MaskedImage
               src="/portfolio/altamash.jpg"
               alt="Portrait of Altamash Bari"
-              width={822}
-              height={1029}
+              width={1134}
+              height={1387}
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="aspect-[4/5] w-full"
               imgClassName="h-full w-full object-cover"
@@ -31,9 +31,9 @@ export function About() {
             <div className="space-y-6 text-[1.05rem] leading-relaxed text-brown">
               <p>{profile.intro}</p>
               <p>
-                He treats design as a way to evoke emotion, spark curiosity, and connect people. The
-                method rarely changes: understand the place, strip away the noise, and let one clear
-                idea carry the building.
+                He treats every model as the single source of truth for a project: understand the
+                design intent, resolve the clashes, and keep architecture, structure, and MEP
+                speaking the same language from LOD400 through to as-built.
               </p>
             </div>
 
