@@ -15,6 +15,7 @@ const fieldClass =
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [formError, setFormError] = useState<string | null>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -22,7 +23,9 @@ export function Contact() {
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
+    const projectType = String(data.get("projectType") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim(); // honeypot
 
     const nextErrors: Record<string, string> = {};
     if (!name) nextErrors.name = "Please tell me your name.";
@@ -32,6 +35,7 @@ export function Contact() {
     if (!message) nextErrors.message = "A sentence or two about your project helps.";
 
     setErrors(nextErrors);
+    setFormError(null);
     if (Object.keys(nextErrors).length > 0) {
       setStatus("error");
       return;
@@ -39,12 +43,25 @@ export function Contact() {
 
     setStatus("submitting");
     try {
-      // TODO: wire this to a real endpoint (a Next.js route handler or a form
-      // service such as Formspree). This is a simulated submit for now.
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, projectType, message, company }),
+      });
+
+      if (!res.ok) {
+        const payload = await res.json().catch(() => null);
+        setFormError(
+          payload?.error ?? "Something went wrong sending your message. Please email me directly."
+        );
+        setStatus("error");
+        return;
+      }
+
       setStatus("success");
       form.reset();
     } catch {
+      setFormError("Something went wrong sending your message. Please email me directly.");
       setStatus("error");
     }
   }
@@ -109,22 +126,30 @@ export function Contact() {
           <div className="lg:col-span-6 lg:col-start-7">
             {status === "success" ? (
               <Reveal className="flex h-full min-h-64 flex-col justify-center border border-stone bg-sand/40 p-10">
-                <p className="font-display text-3xl text-ink">Thank you.</p>
-                <p className="mt-3 max-w-sm text-brown/85">
-                  Your message is on its way. I reply to every enquiry personally, usually within a
-                  couple of working days.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setStatus("idle")}
-                  className="mt-6 self-start text-sm text-olive underline underline-offset-4"
-                >
-                  Send another message
-                </button>
+                <div role="status" aria-live="polite">
+                  <p className="font-display text-3xl text-ink">Thank you.</p>
+                  <p className="mt-3 max-w-sm text-brown/85">
+                    Your message is on its way. I reply to every enquiry personally, usually within a
+                    couple of working days.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setStatus("idle")}
+                    className="mt-6 text-sm text-olive underline underline-offset-4"
+                  >
+                    Send another message
+                  </button>
+                </div>
               </Reveal>
             ) : (
               <Reveal>
                 <form onSubmit={handleSubmit} noValidate className="grid gap-6">
+                  {/* Honeypot: hidden from real visitors, ignored by assistive tech, but bots tend to fill it. */}
+                  <div className="absolute left-[-9999px]" aria-hidden="true">
+                    <label htmlFor="company">Company</label>
+                    <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+                  </div>
+
                   <div>
                     <label htmlFor="name" className="text-sm text-brown">
                       Name
@@ -199,6 +224,12 @@ export function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {formError && (
+                    <p role="alert" aria-live="assertive" className="text-sm text-[#93392b]">
+                      {formError}
+                    </p>
+                  )}
 
                   <div className="flex flex-wrap items-center gap-5 pt-2">
                     <button
