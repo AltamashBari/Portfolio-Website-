@@ -25,7 +25,7 @@ export const profile = {
     "Architect designing healthcare, transit, and skylines where clarity, climate, and human experience meet.",
   // Longer intro used in the About section.
   intro:
-    "Altamash Bari is an architect who reads every site with a curious lens and answers it with restraint. A Bachelor of Architecture from Integral University, Lucknow, trained inside Architect Hafeez Contractor, he moves fluently from a 300-bed hospital to a 60-storey tower.",
+    "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and façade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
   email: "Barialt0786@gmail.com",
   phoneUAE: "+971 54 720 4196",
   phoneIN: "+91 70077 01513",
@@ -41,7 +41,6 @@ export const navItems: NavItem[] = [
   { label: "About", href: "/#about" },
   { label: "Expertise", href: "/#expertise" },
   { label: "Experience", href: "/#experience" },
-  { label: "Resume", href: "/resume" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -161,16 +160,23 @@ export const certifications: Certification[] = [
 
 export const skillGroups: { label: string; items: string[] }[] = [
   {
-    label: "Software",
-    items: ["AutoCAD", "SketchUp", "Revit", "BIM 360", "Lumion", "Adobe Photoshop", "CorelDRAW"],
+    label: "Design & Drafting",
+    items: ["AutoCAD", "Revit", "Navisworks", "SketchUp", "Dynamo", "Lumion"],
   },
   {
-    label: "Fabrication",
-    items: ["CNC", "Laser Cutting", "3D Printing", "Model Making"],
+    label: "Project Coordination",
+    items: [
+      "BIM Modeling & Clash Detection",
+      "As-Built Documentation (LOD400)",
+      "Authority Submissions",
+      "BIM 360 & ACC",
+      "Aconex",
+      "RFI & Site Support",
+    ],
   },
   {
     label: "Languages",
-    items: ["English", "Hindi", "Urdu"],
+    items: ["English", "Urdu", "Hindi"],
   },
 ];
 
