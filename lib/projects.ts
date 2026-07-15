@@ -34,15 +34,15 @@ export const projects: Project[] = [
     cover: img(
       "hospital",
       "cover.jpg",
-      1500,
-      1173,
+      1600,
+      1703,
       "Exterior render of the 300-bed multi-speciality hospital with a curved perforated facade and forecourt",
     ),
     gallery: [
-      img("hospital", "01.jpg", 1700, 1201, "Climate analysis and form evolution diagrams for the hospital", "Climate analysis & form evolution"),
-      img("hospital", "02.jpg", 1700, 1201, "Site plan and functional zoning diagram for the hospital", "Site plan & functional zoning"),
-      img("hospital", "03.jpg", 1700, 1201, "Design development render of the hospital approach and gardens", "Approach & therapeutic gardens"),
-      img("hospital", "04.jpg", 1700, 1201, "Basement and ground floor plans with rear elevation of the hospital", "Floor plans & rear elevation"),
+      img("hospital", "01.jpg", 1900, 1344, "Climate analysis and form evolution diagrams for the hospital", "Climate analysis & form evolution"),
+      img("hospital", "02.jpg", 1900, 1344, "Site plan, functional diagram and elevation for the hospital", "Site plan, functional diagram & elevation"),
+      img("hospital", "03.jpg", 1900, 1344, "Design development render and movement diagrams for the hospital", "Design development & movement diagrams"),
+      img("hospital", "04.jpg", 1900, 1344, "Basement and ground floor plans with rear elevation of the hospital", "Floor plans & rear elevation"),
     ],
     story: [
       {
@@ -79,13 +79,13 @@ export const projects: Project[] = [
     cover: img(
       "bus-terminal",
       "cover.jpg",
-      1500,
-      1141,
+      1600,
+      1703,
       "Render of the inter state bus terminal, a glazed volume rising above a brick-lined approach",
     ),
     gallery: [
-      img("bus-terminal", "01.jpg", 1700, 1201, "Site plan, functional diagram and elevation of the bus terminal", "Site plan, function & elevation"),
-      img("bus-terminal", "02.jpg", 1700, 1201, "Exploded diagram and interior renders of the bus terminal concourse", "Structure & concourse"),
+      img("bus-terminal", "01.jpg", 1900, 1344, "Stilt, first and second floor plans of the bus terminal", "Architectural floor plans"),
+      img("bus-terminal", "02.jpg", 1900, 1344, "Exploded diagram and interior renders of the bus terminal concourse", "Structure & concourse"),
     ],
     story: [
       {
@@ -122,13 +122,13 @@ export const projects: Project[] = [
     cover: img(
       "pavilion",
       "cover.jpg",
-      1500,
-      1643,
+      1600,
+      1703,
       "Render of the Iconic Indian Pavilion, gridshell domes and a branching central canopy among palms",
     ),
     gallery: [
-      img("pavilion", "01.jpg", 1700, 1201, "Sections and site plan of the pavilion domes", "Sections & site plan"),
-      img("pavilion", "02.jpg", 1700, 1201, "Plans and renders of the pavilion dome cluster", "Plans & dome cluster"),
+      img("pavilion", "01.jpg", 1900, 1344, "Sections and site plan of the pavilion domes", "Sections & site plan"),
+      img("pavilion", "02.jpg", 1900, 1344, "Plans and renders of the pavilion dome cluster", "Plans & dome cluster"),
     ],
     story: [
       {
@@ -165,14 +165,14 @@ export const projects: Project[] = [
     cover: img(
       "mixed-use",
       "cover.jpg",
-      1500,
-      1128,
+      1600,
+      1703,
       "Aerial render of the mixed-use high-rise with a glazed atrium base and landscaped grounds",
     ),
     gallery: [
-      img("mixed-use", "01.jpg", 1700, 1201, "Exploded diagram, site plan and section of the mixed-use building", "Exploded program & section"),
-      img("mixed-use", "02.jpg", 1700, 1201, "Front elevation and floor plans of the mixed-use high-rise", "Elevations & plans"),
-      img("mixed-use", "03.jpg", 1700, 1201, "Back elevation and detail views of the mixed-use high-rise", "Elevations & details"),
+      img("mixed-use", "01.jpg", 1900, 1344, "Exploded diagram, site plan and section of the mixed-use building", "Exploded program & section"),
+      img("mixed-use", "02.jpg", 1900, 1344, "Exterior render and office/residential floor plans of the mixed-use high-rise", "Renders & floor plans"),
+      img("mixed-use", "03.jpg", 1900, 1344, "Front and back elevations with render and floor plans of the mixed-use high-rise", "Elevations, render & floor plans"),
     ],
     story: [
       {
@@ -209,14 +209,14 @@ export const projects: Project[] = [
     cover: img(
       "monte-south",
       "cover.jpg",
-      1500,
-      1962,
+      1600,
+      1838,
       "Render of the Monte South twin residential towers rising above a landscaped podium in South Mumbai",
     ),
     gallery: [
-      img("monte-south", "01.jpg", 1700, 1201, "Site plan with building layout for the Monte South development", "Site plan & layout"),
-      img("monte-south", "02.jpg", 1700, 1201, "Podium level and club house plans with tower details", "Podium & club house"),
-      img("monte-south", "03.jpg", 1700, 1201, "Tower elevations and unit plans for Monte South", "Elevations & unit plans"),
+      img("monte-south", "01.jpg", 1900, 1344, "Site plan with building layout for the Monte South development", "Site plan & layout"),
+      img("monte-south", "02.jpg", 1900, 1344, "Podium level and club house plans with tower details", "Podium & club house"),
+      img("monte-south", "03.jpg", 1900, 1344, "Tower elevations, toilet details and key plan for Monte South", "Elevations & details"),
     ],
     story: [
       {
@@ -253,19 +253,19 @@ export const projects: Project[] = [
     cover: img(
       "shalimar",
       "cover.jpg",
-      1500,
-      1414,
+      1600,
+      1702,
       "Render of the Shalimar One World commercial towers with a glazed, colour-lit facade on the Gomti riverfront",
     ),
     gallery: [
-      img("shalimar", "01.jpg", 1700, 1201, "Site plan of the Shalimar One World towers along the Gomti river", "Riverfront site plan"),
-      img("shalimar", "02.jpg", 1700, 1201, "Group housing and hotel zoning plans for Shalimar One World", "Zoning & massing"),
-      img("shalimar", "03.jpg", 1700, 1201, "Tower elevations, section and interior views of Shalimar One World", "Elevations & interiors"),
+      img("shalimar", "01.jpg", 1900, 1344, "Site plan of the Shalimar One World towers along the Gomti river", "Riverfront site plan"),
+      img("shalimar", "02.jpg", 1900, 1344, "Group housing and hotel zoning plans for Shalimar One World", "Zoning & massing"),
+      img("shalimar", "03.jpg", 1900, 1344, "Tower elevations and exterior renders of Shalimar One World", "Elevations & renders"),
     ],
     story: [
       {
         heading: "On the river's edge",
-        body: "The 19-acre plot sits on the bank of the Gomti, and the whole scheme is turned to face the water, trading a generic business park for a genuine riverfront address.",
+        body: "The 7.9-acre plot sits on the bank of the Gomti, and the whole scheme is turned to face the water, trading a generic business park for a genuine riverfront address.",
       },
       {
         heading: "Four towers, one deck",
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     specs: [
       { label: "Type", value: "Commercial, Office" },
       { label: "Location", value: "Lucknow, Gomti riverfront" },
-      { label: "Site", value: "19 acres, 4 towers" },
+      { label: "Site", value: "7.9 acres (32,550 sqm), 4 towers" },
       { label: "Status", value: "Design development" },
     ],
   },
