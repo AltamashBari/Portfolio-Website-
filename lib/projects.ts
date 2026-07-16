@@ -1,11 +1,11 @@
 import type { Project, ProjectImage } from "./types";
 
 /*
-  ALTAMASH BARI — selected works.
-  ----------------------------------------------------------------------------
-  Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
-  numbered sheets (01.jpg ...) are the presentation sheets shown in the case
-  study. To update a project, edit its object and drop new files in its folder.
+ALTAMASH BARI — selected works.
+----------------------------------------------------------------------------
+Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
+numbered sheets (01.jpg ...) are the presentation sheets shown in the case
+study. To update a project, edit its object and drop new files in its folder.
 */
 
 function img(
@@ -20,6 +20,70 @@ function img(
 }
 
 export const projects: Project[] = [
+  {
+    slug: "sky-residences-expo-city-dubai",
+    title: "Sky Residences, Expo City Dubai",
+    category: "Residential",
+    location: "Expo City Dubai, UAE",
+    year: "2025",
+    status: "In Progress",
+    featured: true,
+    summary:
+      "Multidisciplinary LOD 400 BIM coordination across architecture, facade, interiors, structure, MEP and landscape for a residential community at Expo City Dubai.",
+    intro:
+      "Sky Residences is a mixed-use residential community developed by Expo City Dubai at the heart of the Expo 2020 legacy site, comprising mid- to high-rise towers gathered around Al Wasl Plaza. Altamash contributed to the project's multidisciplinary LOD 400 BIM delivery, coordinating architectural, facade, interior, structural, MEP, landscape and specialist packages through construction-stage documentation, progressing from BIM Architect / BIM Specialist to Arch & Facade Lead.",
+    cover: img(
+      "sky-residences",
+      "cover.jpg",
+      2000,
+      1127,
+      "Official render of the Sky Residences towers and landscaped retail promenade at Expo City Dubai",
+    ),
+    gallery: [
+      img("sky-residences", "01.jpg", 1830, 1066, "Aerial site plan of the Expo City Dubai masterplan showing the Sky Residences district", "Expo City Dubai masterplan, official image"),
+      img("sky-residences", "02.jpg", 1900, 1344, "Diagram illustrating role progression from BIM Architect / BIM Specialist to Arch & Facade Lead on Sky Residences", "Role progression, 2025"),
+      img("sky-residences", "03.jpg", 1900, 1344, "Diagram of the LOD 400 multidisciplinary package scope across Architecture, Facade, Interior Design, Structure, MEP, Landscape and specialist packages", "LOD 400 package scope"),
+      img("sky-residences", "04.jpg", 1900, 1344, "Diagram of BIM package coordination and discipline interfaces across AR, FC, ID, ST, MEP and LA", "BIM package & discipline coordination"),
+      img("sky-residences", "05.jpg", 740, 1110, "Sky Residences towers under construction at Expo City Dubai, viewed from the site perimeter", "Sky Residences construction progress, site photograph"),
+    ],
+    story: [
+      {
+        heading: "Project Overview",
+        body: "Sky Residences is a signature residential community within Expo City Dubai, forming part of the wider Expo City master plan on the site of Expo 2020 Dubai. The development comprises multiple mid- to high-rise towers of up to fifteen storeys, offering a mix of one- to four-bedroom apartments across a built-up area of more than 200,000 sqm. Towers sit above a landscaped podium deck with views toward Al Wasl Plaza, supported by amenities including swimming pools, gymnasiums, retail space, community halls and multi-level parking. The project is being delivered with a focus on passive cooling, operational efficiency and long-term sustainability, in keeping with Expo City Dubai's wider net-zero ambitions. This description reflects publicly available project information; Altamash's personal contribution is set out below.",
+      },
+      {
+        heading: "Role & Professional Progression",
+        body: "Altamash joined Sky Residences as a BIM Architect / BIM Specialist and progressed, over the course of the project, to Arch & Facade Lead. This progression reflects growing responsibility for architectural and facade BIM coordination as the project moved through LOD 400 documentation toward construction.",
+      },
+      {
+        heading: "LOD 400 Multidisciplinary Scope",
+        body: "Altamash's involvement spans the project's LOD 400 stage, working across multiple coordinated packages: Architecture (AR), Facade (FC), Interior Design (ID), Structure (ST), MEP, Landscape (LA), and other specialist consultant packages. LOD 400 requires models and drawings to carry construction-ready, near fabrication-level detail, so coordination at this stage is focused on resolving interfaces between disciplines ahead of issue for construction.",
+      },
+      {
+        heading: "BIM Package & Discipline Overview",
+        body: "Coordination at this stage has covered architectural model development and technical review; interface checks between architecture and structure, MEP and landscape; and facade-specific coordination including geometry, openings and slab-edge interfaces with the structural package. Interior design coordination has helped keep fit-out and architectural information aligned as the design has matured toward construction issue.",
+      },
+      {
+        heading: "Responsibilities & Coordination Workflow",
+        body: "Across this progression, Altamash's contribution has included multidisciplinary LOD 400 BIM coordination across the AR, FC, ID, ST, MEP and LA packages; architectural model development and technical review; federated-model review and interface coordination between disciplines; model audits and quality checks against project BIM requirements; clash identification, coordination tracking and follow-up toward resolution; review of constructability and discipline interfaces; coordination of architectural, structural and building-services requirements; facade geometry, openings, slab-edge and structural-interface coordination; curtain-wall and facade-package coordination as Arch & Facade Lead; support for coordinated drawings and construction-stage deliverables; and ongoing communication with discipline leads, consultants and project stakeholders.",
+      },
+      {
+        heading: "Key Professional Contribution",
+        body: "Contributed to the multidisciplinary LOD 400 BIM delivery and coordination of Sky Residences at Expo City Dubai, working across architectural, facade, interior, structural, MEP, landscape and specialist packages, progressing from BIM Architect / BIM Specialist to Arch & Facade Lead over the course of the project.",
+      },
+      {
+        heading: "Sources & Image Credits",
+        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. The cover render and masterplan aerial on this page are official Expo City Dubai marketing images, credited to Expo City Dubai and its design and consultant team. The construction-progress photograph shows the towers under construction as viewed from the public site perimeter. The role-progression, LOD 400 scope and BIM coordination diagrams are original illustrations created for this portfolio and do not reproduce any confidential project model, drawing, or document. The content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
+      },
+    ],
+    specs: [
+      { label: "Location", value: "Expo City Dubai, UAE" },
+      { label: "Sector", value: "Residential, Mixed-Use Community" },
+      { label: "Stage", value: "LOD 400, Construction-Stage BIM" },
+      { label: "Role", value: "BIM Architect to Arch & Facade Lead" },
+      { label: "Packages", value: "AR, FC, ID, ST, MEP, LA + Specialist" },
+    ],
+  },
   {
     slug: "300-bed-multispeciality-hospital",
     title: "300-Bed Multi-Speciality Hospital",
@@ -281,70 +345,6 @@ export const projects: Project[] = [
       { label: "Location", value: "Lucknow, Gomti riverfront" },
       { label: "Site", value: "7.9 acres (32,550 sqm), 4 towers" },
       { label: "Status", value: "Design development" },
-    ],
-  },
-  {
-    slug: "sky-residences-expo-city-dubai",
-    title: "Sky Residences, Expo City Dubai",
-    category: "Residential",
-    location: "Expo City Dubai, UAE",
-    year: "2025",
-    status: "In Progress",
-    featured: true,
-    summary:
-      "Multidisciplinary LOD 400 BIM coordination across architecture, facade, interiors, structure, MEP and landscape for a residential community at Expo City Dubai.",
-    intro:
-      "Sky Residences is a mixed-use residential community developed by Expo City Dubai at the heart of the Expo 2020 legacy site, comprising mid- to high-rise towers gathered around Al Wasl Plaza. Altamash contributed to the project's multidisciplinary LOD 400 BIM delivery, coordinating architectural, facade, interior, structural, MEP, landscape and specialist packages through construction-stage documentation, progressing from BIM Architect / BIM Specialist to Arch & Facade Lead.",
-    cover: img(
-      "sky-residences",
-      "cover.jpg",
-      2000,
-      1127,
-      "Official render of the Sky Residences towers and landscaped retail promenade at Expo City Dubai",
-    ),
-    gallery: [
-      img("sky-residences", "01.jpg", 1830, 1066, "Aerial site plan of the Expo City Dubai masterplan showing the Sky Residences district", "Expo City Dubai masterplan, official image"),
-      img("sky-residences", "02.jpg", 1900, 1344, "Diagram illustrating role progression from BIM Architect / BIM Specialist to Arch & Facade Lead on Sky Residences", "Role progression, 2025"),
-      img("sky-residences", "03.jpg", 1900, 1344, "Diagram of the LOD 400 multidisciplinary package scope across Architecture, Facade, Interior Design, Structure, MEP, Landscape and specialist packages", "LOD 400 package scope"),
-      img("sky-residences", "04.jpg", 1900, 1344, "Diagram of BIM package coordination and discipline interfaces across AR, FC, ID, ST, MEP and LA", "BIM package & discipline coordination"),
-      img("sky-residences", "05.jpg", 365, 547, "Aerial view of Expo City Dubai showing the Sky Residences towers within the wider masterplan", "Expo City Dubai aerial context, official image"),
-    ],
-    story: [
-      {
-        heading: "Project Overview",
-        body: "Sky Residences is a signature residential community within Expo City Dubai, forming part of the wider Expo City master plan on the site of Expo 2020 Dubai. The development comprises multiple mid- to high-rise towers of up to fifteen storeys, offering a mix of one- to four-bedroom apartments across a built-up area of more than 200,000 sqm. Towers sit above a landscaped podium deck with views toward Al Wasl Plaza, supported by amenities including swimming pools, gymnasiums, retail space, community halls and multi-level parking. The project is being delivered with a focus on passive cooling, operational efficiency and long-term sustainability, in keeping with Expo City Dubai's wider net-zero ambitions. This description reflects publicly available project information; Altamash's personal contribution is set out below.",
-      },
-      {
-        heading: "Role & Professional Progression",
-        body: "Altamash joined Sky Residences as a BIM Architect / BIM Specialist and progressed, over the course of the project, to Arch & Facade Lead. This progression reflects growing responsibility for architectural and facade BIM coordination as the project moved through LOD 400 documentation toward construction.",
-      },
-      {
-        heading: "LOD 400 Multidisciplinary Scope",
-        body: "Altamash's involvement spans the project's LOD 400 stage, working across multiple coordinated packages: Architecture (AR), Facade (FC), Interior Design (ID), Structure (ST), MEP, Landscape (LA), and other specialist consultant packages. LOD 400 requires models and drawings to carry construction-ready, near fabrication-level detail, so coordination at this stage is focused on resolving interfaces between disciplines ahead of issue for construction.",
-      },
-      {
-        heading: "BIM Package & Discipline Overview",
-        body: "Coordination at this stage has covered architectural model development and technical review; interface checks between architecture and structure, MEP and landscape; and facade-specific coordination including geometry, openings and slab-edge interfaces with the structural package. Interior design coordination has helped keep fit-out and architectural information aligned as the design has matured toward construction issue.",
-      },
-      {
-        heading: "Responsibilities & Coordination Workflow",
-        body: "Across this progression, Altamash's contribution has included multidisciplinary LOD 400 BIM coordination across the AR, FC, ID, ST, MEP and LA packages; architectural model development and technical review; federated-model review and interface coordination between disciplines; model audits and quality checks against project BIM requirements; clash identification, coordination tracking and follow-up toward resolution; review of constructability and discipline interfaces; coordination of architectural, structural and building-services requirements; facade geometry, openings, slab-edge and structural-interface coordination; curtain-wall and facade-package coordination as Arch & Facade Lead; support for coordinated drawings and construction-stage deliverables; and ongoing communication with discipline leads, consultants and project stakeholders.",
-      },
-      {
-        heading: "Key Professional Contribution",
-        body: "Contributed to the multidisciplinary LOD 400 BIM delivery and coordination of Sky Residences at Expo City Dubai, working across architectural, facade, interior, structural, MEP, landscape and specialist packages, progressing from BIM Architect / BIM Specialist to Arch & Facade Lead over the course of the project.",
-      },
-      {
-        heading: "Sources & Image Credits",
-        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. The cover render, masterplan aerial and aerial context image on this page are official Expo City Dubai marketing images, credited to Expo City Dubai and its design and consultant team. The role-progression, LOD 400 scope and BIM coordination diagrams are original illustrations created for this portfolio and do not reproduce any confidential project model, drawing, or document. The content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
-      },
-    ],
-    specs: [
-      { label: "Location", value: "Expo City Dubai, UAE" },
-      { label: "Sector", value: "Residential, Mixed-Use Community" },
-      { label: "Stage", value: "LOD 400, Construction-Stage BIM" },
-      { label: "Role", value: "BIM Architect to Arch & Facade Lead" },
-      { label: "Packages", value: "AR, FC, ID, ST, MEP, LA + Specialist" },
     ],
   },
 ];
