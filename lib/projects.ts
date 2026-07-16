@@ -1,4 +1,4 @@
-import type { Project, ProjectImage } from "./types";
+aimport type { Project, ProjectImage } from "./types";
 
 /*
 ALTAMASH BARI — selected works.
@@ -8,7 +8,7 @@ numbered sheets (01.jpg ...) are the presentation sheets shown in the case
 study. To update a project, edit its object and drop new files in its folder.
 */
 
-function img(
+function img
   folder: string,
   file: string,
   width: number,
@@ -128,7 +128,81 @@ export const projects: Project[] = [
       { label: "Capacity", value: "300 beds" },
       { label: "Year", value: "2024" },
     ],
+    {
+        slug: "shalimar-one-world-group-housing",
+        title: "Shalimar One World – Group Housing",
+        category: "Residential",
+        location: "Lucknow, U.P.",
+        year: "2024",
+        status: "Concept",
+        featured: true,
+        summary:
+                "A large-scale group-housing development in Lucknow: site analysis, five tower typologies, apartment-mix studies, massing comparisons and FSI planning across a 7.9-acre riverside plot.",
+        intro:
+                "Shalimar One World – Group Housing is a large-scale residential development in Lucknow, Uttar Pradesh, planned on a 7.9-acre (72,185 sqm) site on the bank of the Gomti river, as part of the wider Shalimar One World masterplan. Altamash contributed to the project during his time at Architect Hafeez Contractor, working across site and context analysis, residential tower and apartment planning, massing comparisons, and FSI planning.",
+        cover: img(
+                "shalimar-one-world-group-housing",
+                "cover.jpg",
+                2000,
+                1165,
+                "Conceptual exterior render of the Shalimar One World Group Housing towers along a landscaped boulevard",
+              ),
+        gallery: [
+                img("shalimar-one-world-group-housing", "01.jpg", 1900, 1084, "Site zoning, sun-path, site-extents, plot-layout, location and conceptual massing diagrams for Shalimar One World Group Housing", "Site & context analysis"),
+                img("shalimar-one-world-group-housing", "02.jpg", 1700, 1638, "Typical floor plan of Tower A at Shalimar One World Group Housing, showing 3BHK+Servant (Small) and 2BHK+Study apartment layouts around a shared lift core", "Tower A — typical floor plan"),
+                img("shalimar-one-world-group-housing", "03.jpg", 1700, 1638, "Typical floor plan of Tower B at Shalimar One World Group Housing, showing 3BHK+Servant (Medium) and 3BHK apartment layouts", "Tower B — typical floor plan"),
+                img("shalimar-one-world-group-housing", "04.jpg", 1700, 1638, "Typical floor plan of Tower C at Shalimar One World Group Housing, showing 3BHK+Servant (Ultima) and 3BHK apartment layouts", "Tower C — typical floor plan"),
+                img("shalimar-one-world-group-housing", "05.jpg", 1700, 1676, "Combined floor plans of Towers D and E at Shalimar One World Group Housing, stacking multiple apartment typologies around shared cores and corridors", "Towers D & E — combined block plans"),
+                img("shalimar-one-world-group-housing", "06.jpg", 1900, 1226, "Comparative massing study of merged versus separated tower blocks for Shalimar One World Group Housing", "Comparative massing study"),
+              ],
+        story: [
+          {
+                    heading: "Site & Context Analysis",
+                    body: "The scheme was studied against its context within the wider Shalimar One World masterplan on the bank of the Gomti river in Lucknow, alongside the adjoining Valencia phases and the One World commercial towers. Zoning, sun-path and site-extents studies mapped the plot's orientation, seasonal sun angles and proximity to nearby landmarks, while plot-layout and location studies fixed the site against the riverfront edge. A conceptual massing study then translated these constraints into an initial tower arrangement across the plot.",
+          },
+          {
+                    heading: "Tower A — Typical Floor Plan",
+                    body: "Tower A was planned as a point block with a mix of 3BHK+Servant (Small) and 2BHK+Study apartments arranged around a central core of three passenger lifts and a dedicated fire lift, giving every unit direct daylight and cross-ventilation.",
+          },
+          {
+                    heading: "Tower B — Typical Floor Plan",
+                    body: "Tower B carries a larger floor plate with 3BHK+Servant (Medium) and 3BHK apartment types, organised around the same three-lift-and-fire-lift core arrangement used across the tower family for consistency of servicing and egress.",
+          },
+          {
+                    heading: "Tower C — Typical Floor Plan",
+                    body: "Tower C introduces the largest apartment typology in the scheme, 3BHK+Servant (Ultima), alongside 3BHK units, again planned around a shared core. Towers A, B and C together form the principal tower cluster on Plot A.",
+          },
+          {
+                    heading: "Towers D & E — Combined Block Plans",
+                    body: "Towers D and E were developed as combined-block typologies on Plot B, stacking 3BHK+Servant (Small/Medium), 3BHK and 2BHK+Study apartments around shared fire-rated corridors and dual cores, testing a higher-density block configuration alongside the point towers of Plot A.",
+          },
+          {
+                    heading: "Comparative Massing Study",
+                    body: "Two massing options were studied for the site: one with merged, combined tower blocks and one with fully separated point towers. The comparison weighed built form, tower spacing, open space and site circulation against the same total unit count, informing the tower arrangement taken forward.",
+          },
+          {
+                    heading: "FSI & Planning Summary",
+                    body: "Across Plot A (Towers A, B and C) and Plot B (Towers D, E and F), the project's area statement worked out to a combined FSI consumption of approximately 2,96,612 sq.m (about 3.19 million sq.ft) against a permissible FSI of approximately 2,98,926 sq.m (about 3.22 million sq.ft), keeping the overall massing within the site's development potential across the residential towers, club house and entrance-hall areas.",
+          },
+          {
+                    heading: "My Contribution",
+                    body: "Contributed to Shalimar One World – Group Housing during his time at Architect Hafeez Contractor, covering site and context analysis, residential tower and apartment planning across five tower typologies (Towers A through E), unit-mix and layout optimisation, conceptual massing comparisons, area statements and FSI calculations, and the preparation and coordination of architectural drawings and presentation material.",
+          },
+          {
+                    heading: "Sources & Credits",
+                    body: "Project drawings and figures are adapted from internal presentation material prepared at Architect Hafeez Contractor; the drawings shown here have been cropped and isolated from their original page layout for this portfolio and do not reproduce the source material's page design, branding or office stamps. Supplementary public context on Shalimar One World and its Lucknow riverfront location is drawn from Shalimar Corp's official project channels. This page describes Altamash's personal contribution to the project only.",
+          },
+              ],
+        specs: [
+          { label: "Type", value: "Residential, Group Housing" },
+          { label: "Location", value: "Lucknow, U.P." },
+          { label: "Site", value: "7.9 acres (72,185 sqm)" },
+          { label: "Status", value: "Conceptual planning stage" },
+          { label: "Role", value: "Architect Hafeez Contractor" },
+              ],
   },
+  
+    },
   {
     slug: "monte-south-residential-tower",
     title: "Monte South Residential Tower",
