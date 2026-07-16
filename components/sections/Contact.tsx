@@ -94,9 +94,6 @@ export function Contact() {
                   <a href={`tel:${profile.phoneUAE.replace(/\s+/g, "")}`} className="text-lg text-ink hover:text-olive">
                     {profile.phoneUAE}
                   </a>
-                  <a href={`tel:${profile.phoneIN.replace(/\s+/g, "")}`} className="text-lg text-ink hover:text-olive">
-                    {profile.phoneIN}
-                  </a>
                 </div>
               </div>
               <div>
