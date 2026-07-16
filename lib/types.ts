@@ -14,6 +14,13 @@ export type ProjectCategory =
   | "Interior"
   | "Cultural";
 
+/**
+ * Editorial grouping used on the Selected Works page and homepage teaser.
+ * Set once per project; independent of `status` so a later stage change
+ * never silently moves a project into a different row.
+ */
+export type ProjectWorkType = "Architectural" | "Interior" | "Competition";
+
 export interface ProjectImage {
   /** Local path like /portfolio/{slug}/cover.jpg */
   src: string;
@@ -42,6 +49,8 @@ export interface Project {
   location: string;
   year: string;
   status: ProjectStatus;
+  /** Selected Works row: Architectural Projects / Interior Design / Design Competition Entries. */
+  workType: ProjectWorkType;
   featured: boolean;
   /** One line used on cards and listings. */
   summary: string;
