@@ -130,6 +130,94 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "monte-south-residential-tower",
+    title: "Monte South Residential Tower",
+    category: "Residential",
+    location: "Byculla, Mumbai",
+    year: "2023",
+    status: "In Progress",
+    featured: true,
+    summary: "An award-winning luxury tower rising over the old Khatau Mills.",
+    intro:
+      "Monte South is an award-winning luxury development near South Mumbai at Byculla, spread across a 12.5-acre plot of the historic Khatau Mills. Four residential towers of 60-plus storeys hold ultra-spacious homes above a podium beach and amazon-themed landscaping. Altamash worked on the project during his time at Architect Hafeez Contractor.",
+    cover: img(
+      "monte-south",
+      "cover.jpg",
+      1600,
+      1838,
+      "Render of the Monte South twin residential towers rising above a landscaped podium in South Mumbai",
+    ),
+    gallery: [
+      img("monte-south", "01.jpg", 1900, 1344, "Site plan with building layout for the Monte South development", "Site plan & layout"),
+      img("monte-south", "02.jpg", 1900, 1344, "Podium level and club house plans with tower details", "Podium & club house"),
+      img("monte-south", "03.jpg", 1900, 1344, "Tower elevations, toilet details and key plan for Monte South", "Elevations & details"),
+    ],
+    story: [
+      {
+        heading: "Towers over the mills",
+        body: "Four towers of 60-plus storeys rise from a 12.5-acre plot of the old Khatau Mills, carrying 2, 2.5, 3, and 3.5 BHK homes with a range of resort-grade amenities.",
+      },
+      {
+        heading: "A podium of its own",
+        body: "The podium becomes a world in itself, a beach and amazon-themed landscape lifted above the city, giving residents calm and green in dense South Mumbai.",
+      },
+      {
+        heading: "Recognised work",
+        body: "Monte South has earned prestigious honours, including Best Residential High-Rise Development at the Asia Pacific Property Awards, the calibre of practice Altamash trained inside at Hafeez Contractor.",
+      },
+    ],
+    specs: [
+      { label: "Type", value: "Residential, High-Rise" },
+      { label: "Location", value: "Byculla, Mumbai" },
+      { label: "Site", value: "12.5 acres, 60+ storeys" },
+      { label: "Role", value: "Architect Hafeez Contractor" },
+    ],
+  },
+  {
+    slug: "shalimar-one-world-commercial-towers",
+    title: "Shalimar One World Commercial Towers",
+    category: "Commercial",
+    location: "Lucknow",
+    year: "2023",
+    status: "Design Development",
+    featured: true,
+    summary: "Four riverfront commercial towers on the bank of the Gomti.",
+    intro:
+      "Shalimar One World is an upcoming commercial development in Lucknow on the bank of the Gomti river, a cluster of four towers of office and commercial space gathered around a vast entry deck that opens to a panoramic view of the water.",
+    cover: img(
+      "shalimar",
+      "cover.jpg",
+      1600,
+      1702,
+      "Render of the Shalimar One World commercial towers with a glazed, colour-lit facade on the Gomti riverfront",
+    ),
+    gallery: [
+      img("shalimar", "01.jpg", 1900, 1344, "Site plan of the Shalimar One World towers along the Gomti river", "Riverfront site plan"),
+      img("shalimar", "02.jpg", 1900, 1344, "Group housing and hotel zoning plans for Shalimar One World", "Zoning & massing"),
+      img("shalimar", "03.jpg", 1900, 1344, "Tower elevations and exterior renders of Shalimar One World", "Elevations & renders"),
+    ],
+    story: [
+      {
+        heading: "On the river's edge",
+        body: "The 7.9-acre plot sits on the bank of the Gomti, and the whole scheme is turned to face the water, trading a generic business park for a genuine riverfront address.",
+      },
+      {
+        heading: "Four towers, one deck",
+        body: "Four office and commercial towers share a huge entry deck, the highlight of the scheme, a raised public space that faces the river and slows visitors down.",
+      },
+      {
+        heading: "Built for the city",
+        body: "Now in design development, the towers are scaled to become a working piece of Lucknow's commercial future rather than a sealed enclave.",
+      },
+    ],
+    specs: [
+      { label: "Type", value: "Commercial, Office" },
+      { label: "Location", value: "Lucknow, Gomti riverfront" },
+      { label: "Site", value: "7.9 acres (32,550 sqm), 4 towers" },
+      { label: "Status", value: "Design development" },
+    ],
+  },
+  {
     slug: "inter-state-bus-terminal",
     title: "Inter State Bus Terminal",
     category: "Transit",
@@ -257,94 +345,6 @@ export const projects: Project[] = [
       { label: "Location", value: "Lucknow" },
       { label: "Mix", value: "Retail, Office, Homes, Leisure" },
       { label: "Year", value: "2021" },
-    ],
-  },
-  {
-    slug: "monte-south-residential-tower",
-    title: "Monte South Residential Tower",
-    category: "Residential",
-    location: "Byculla, Mumbai",
-    year: "2023",
-    status: "In Progress",
-    featured: true,
-    summary: "An award-winning luxury tower rising over the old Khatau Mills.",
-    intro:
-      "Monte South is an award-winning luxury development near South Mumbai at Byculla, spread across a 12.5-acre plot of the historic Khatau Mills. Four residential towers of 60-plus storeys hold ultra-spacious homes above a podium beach and amazon-themed landscaping. Altamash worked on the project during his time at Architect Hafeez Contractor.",
-    cover: img(
-      "monte-south",
-      "cover.jpg",
-      1600,
-      1838,
-      "Render of the Monte South twin residential towers rising above a landscaped podium in South Mumbai",
-    ),
-    gallery: [
-      img("monte-south", "01.jpg", 1900, 1344, "Site plan with building layout for the Monte South development", "Site plan & layout"),
-      img("monte-south", "02.jpg", 1900, 1344, "Podium level and club house plans with tower details", "Podium & club house"),
-      img("monte-south", "03.jpg", 1900, 1344, "Tower elevations, toilet details and key plan for Monte South", "Elevations & details"),
-    ],
-    story: [
-      {
-        heading: "Towers over the mills",
-        body: "Four towers of 60-plus storeys rise from a 12.5-acre plot of the old Khatau Mills, carrying 2, 2.5, 3, and 3.5 BHK homes with a range of resort-grade amenities.",
-      },
-      {
-        heading: "A podium of its own",
-        body: "The podium becomes a world in itself, a beach and amazon-themed landscape lifted above the city, giving residents calm and green in dense South Mumbai.",
-      },
-      {
-        heading: "Recognised work",
-        body: "Monte South has earned prestigious honours, including Best Residential High-Rise Development at the Asia Pacific Property Awards, the calibre of practice Altamash trained inside at Hafeez Contractor.",
-      },
-    ],
-    specs: [
-      { label: "Type", value: "Residential, High-Rise" },
-      { label: "Location", value: "Byculla, Mumbai" },
-      { label: "Site", value: "12.5 acres, 60+ storeys" },
-      { label: "Role", value: "Architect Hafeez Contractor" },
-    ],
-  },
-  {
-    slug: "shalimar-one-world-commercial-towers",
-    title: "Shalimar One World Commercial Towers",
-    category: "Commercial",
-    location: "Lucknow",
-    year: "2023",
-    status: "Design Development",
-    featured: true,
-    summary: "Four riverfront commercial towers on the bank of the Gomti.",
-    intro:
-      "Shalimar One World is an upcoming commercial development in Lucknow on the bank of the Gomti river, a cluster of four towers of office and commercial space gathered around a vast entry deck that opens to a panoramic view of the water.",
-    cover: img(
-      "shalimar",
-      "cover.jpg",
-      1600,
-      1702,
-      "Render of the Shalimar One World commercial towers with a glazed, colour-lit facade on the Gomti riverfront",
-    ),
-    gallery: [
-      img("shalimar", "01.jpg", 1900, 1344, "Site plan of the Shalimar One World towers along the Gomti river", "Riverfront site plan"),
-      img("shalimar", "02.jpg", 1900, 1344, "Group housing and hotel zoning plans for Shalimar One World", "Zoning & massing"),
-      img("shalimar", "03.jpg", 1900, 1344, "Tower elevations and exterior renders of Shalimar One World", "Elevations & renders"),
-    ],
-    story: [
-      {
-        heading: "On the river's edge",
-        body: "The 7.9-acre plot sits on the bank of the Gomti, and the whole scheme is turned to face the water, trading a generic business park for a genuine riverfront address.",
-      },
-      {
-        heading: "Four towers, one deck",
-        body: "Four office and commercial towers share a huge entry deck, the highlight of the scheme, a raised public space that faces the river and slows visitors down.",
-      },
-      {
-        heading: "Built for the city",
-        body: "Now in design development, the towers are scaled to become a working piece of Lucknow's commercial future rather than a sealed enclave.",
-      },
-    ],
-    specs: [
-      { label: "Type", value: "Commercial, Office" },
-      { label: "Location", value: "Lucknow, Gomti riverfront" },
-      { label: "Site", value: "7.9 acres (32,550 sqm), 4 towers" },
-      { label: "Status", value: "Design development" },
     ],
   },
 ];
