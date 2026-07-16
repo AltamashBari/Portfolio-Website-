@@ -1,5 +1,4 @@
-aimport type { Project, ProjectImage } from "./types";
-
+import type { Project, ProjectImage } from "./types";
 /*
 ALTAMASH BARI — selected works.
 ----------------------------------------------------------------------------
