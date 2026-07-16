@@ -1,13 +1,15 @@
 import type { Project, ProjectImage } from "./types";
+
 /*
-ALTAMASH BARI — selected works.
-----------------------------------------------------------------------------
-Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
-numbered sheets (01.jpg ...) are the presentation sheets shown in the case
-study. To update a project, edit its object and drop new files in its folder.
+  ALTAMASH BARI — selected works.
+  ----------------------------------------------------------------------------
+  Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
+  numbered sheets (01.jpg ...) are the presentation sheets shown in the case
+  study. To update a project, edit its object and drop new files in its folder.
 */
 
-function img(  folder: string,
+function img(
+  folder: string,
   file: string,
   width: number,
   height: number,
@@ -25,6 +27,7 @@ export const projects: Project[] = [
     location: "Expo City Dubai, UAE",
     year: "2025",
     status: "Design Development",
+    workType: "Architectural",
     featured: true,
     summary:
       "Multidisciplinary LOD 400 BIM coordination across architecture, facade, interiors, structure, MEP and landscape for a residential community at Expo City Dubai.",
@@ -89,6 +92,7 @@ export const projects: Project[] = [
     location: "Balrampur, U.P.",
     year: "2024",
     status: "Concept",
+    workType: "Competition",
     featured: true,
     summary: "A climate-shaped civic hospital planned around therapeutic gardens.",
     intro:
@@ -127,88 +131,89 @@ export const projects: Project[] = [
       { label: "Year", value: "2024" },
     ],
   },
-  {slug: "shalimar-one-world-group-housing",
-        title: "Shalimar One World – Group Housing",
-        category: "Residential",
-        location: "Lucknow, U.P.",
-        year: "2024",
-        status: "Design Development",
-   featured: true,
-        summary:
-                "A large-scale group-housing development in Lucknow: site analysis, five tower typologies, apartment-mix studies, massing comparisons and FSI planning across a 7.9-acre riverside plot.",
-        intro:
-                "Shalimar One World – Group Housing is a large-scale residential development in Lucknow, Uttar Pradesh, planned on a 7.9-acre (72,185 sqm) site on the bank of the Gomti river, as part of the wider Shalimar One World masterplan. Altamash contributed to the project during his time at Architect Hafeez Contractor, working across site and context analysis, residential tower and apartment planning, massing comparisons, and FSI planning.",
-        cover: img(
-                "shalimar-one-world-group-housing",
-                "cover.jpg",
-                2000,
-                1165,
-                "Conceptual exterior render of the Shalimar One World Group Housing towers along a landscaped boulevard",
-              ),
-        gallery: [
-                img("shalimar-one-world-group-housing", "01.jpg", 1900, 1084, "Site zoning, sun-path, site-extents, plot-layout, location and conceptual massing diagrams for Shalimar One World Group Housing", "Site & context analysis"),
-                img("shalimar-one-world-group-housing", "02.jpg", 1700, 1638, "Typical floor plan of Tower A at Shalimar One World Group Housing, showing 3BHK+Servant (Small) and 2BHK+Study apartment layouts around a shared lift core", "Tower A — typical floor plan"),
-                img("shalimar-one-world-group-housing", "03.jpg", 1700, 1638, "Typical floor plan of Tower B at Shalimar One World Group Housing, showing 3BHK+Servant (Medium) and 3BHK apartment layouts", "Tower B — typical floor plan"),
-                img("shalimar-one-world-group-housing", "04.jpg", 1700, 1638, "Typical floor plan of Tower C at Shalimar One World Group Housing, showing 3BHK+Servant (Ultima) and 3BHK apartment layouts", "Tower C — typical floor plan"),
-                img("shalimar-one-world-group-housing", "05.jpg", 1700, 1676, "Combined floor plans of Towers D and E at Shalimar One World Group Housing, stacking multiple apartment typologies around shared cores and corridors", "Towers D & E — combined block plans"),
-                img("shalimar-one-world-group-housing", "06.jpg", 1900, 1226, "Comparative massing study of merged versus separated tower blocks for Shalimar One World Group Housing", "Comparative massing study"),
-              ],
-        story: [
-          {
-                    heading: "Site & Context Analysis",
-                    body: "The scheme was studied against its context within the wider Shalimar One World masterplan on the bank of the Gomti river in Lucknow, alongside the adjoining Valencia phases and the One World commercial towers. Zoning, sun-path and site-extents studies mapped the plot's orientation, seasonal sun angles and proximity to nearby landmarks, while plot-layout and location studies fixed the site against the riverfront edge. A conceptual massing study then translated these constraints into an initial tower arrangement across the plot.",
-          },
-          {
-                    heading: "Tower A — Typical Floor Plan",
-                    body: "Tower A was planned as a point block with a mix of 3BHK+Servant (Small) and 2BHK+Study apartments arranged around a central core of three passenger lifts and a dedicated fire lift, giving every unit direct daylight and cross-ventilation.",
-          },
-          {
-                    heading: "Tower B — Typical Floor Plan",
-                    body: "Tower B carries a larger floor plate with 3BHK+Servant (Medium) and 3BHK apartment types, organised around the same three-lift-and-fire-lift core arrangement used across the tower family for consistency of servicing and egress.",
-          },
-          {
-                    heading: "Tower C — Typical Floor Plan",
-                    body: "Tower C introduces the largest apartment typology in the scheme, 3BHK+Servant (Ultima), alongside 3BHK units, again planned around a shared core. Towers A, B and C together form the principal tower cluster on Plot A.",
-          },
-          {
-                    heading: "Towers D & E — Combined Block Plans",
-                    body: "Towers D and E were developed as combined-block typologies on Plot B, stacking 3BHK+Servant (Small/Medium), 3BHK and 2BHK+Study apartments around shared fire-rated corridors and dual cores, testing a higher-density block configuration alongside the point towers of Plot A.",
-          },
-          {
-                    heading: "Comparative Massing Study",
-                    body: "Two massing options were studied for the site: one with merged, combined tower blocks and one with fully separated point towers. The comparison weighed built form, tower spacing, open space and site circulation against the same total unit count, informing the tower arrangement taken forward.",
-          },
-          {
-                    heading: "FSI & Planning Summary",
-                    body: "Across Plot A (Towers A, B and C) and Plot B (Towers D, E and F), the project's area statement worked out to a combined FSI consumption of approximately 2,96,612 sq.m (about 3.19 million sq.ft) against a permissible FSI of approximately 2,98,926 sq.m (about 3.22 million sq.ft), keeping the overall massing within the site's development potential across the residential towers, club house and entrance-hall areas.",
-          },
-          {
-                    heading: "My Contribution",
-                    body: "Contributed to Shalimar One World – Group Housing during his time at Architect Hafeez Contractor, covering site and context analysis, residential tower and apartment planning across five tower typologies (Towers A through E), unit-mix and layout optimisation, conceptual massing comparisons, area statements and FSI calculations, and the preparation and coordination of architectural drawings and presentation material.",
-          },
-          {
-                    heading: "Sources & Credits",
-                    body: "Project drawings and figures are adapted from internal presentation material prepared at Architect Hafeez Contractor; the drawings shown here have been cropped and isolated from their original page layout for this portfolio and do not reproduce the source material's page design, branding or office stamps. Supplementary public context on Shalimar One World and its Lucknow riverfront location is drawn from Shalimar Corp's official project channels. This page describes Altamash's personal contribution to the project only.",
-          },
-              ],
-        specs: [
-          { label: "Type", value: "Residential, Group Housing" },
-          { label: "Location", value: "Lucknow, U.P." },
-          { label: "Site", value: "7.9 acres (72,185 sqm)" },
-          { label: "Status", value: "Design Development" },
-          { label: "Role", value: "Architect Hafeez Contractor" },
-              ],
+  {
+    slug: "shalimar-one-world-group-housing",
+    title: "Shalimar One World – Group Housing",
+    category: "Residential",
+    location: "Lucknow, U.P.",
+    year: "2024",
+    status: "Design Development",
+    workType: "Architectural",
+    featured: true,
+    summary:
+      "A large-scale group-housing development in Lucknow: site analysis, five tower typologies, apartment-mix studies, massing comparisons and FSI planning across a 7.9-acre riverside plot.",
+    intro:
+      "Shalimar One World – Group Housing is a large-scale residential development in Lucknow, Uttar Pradesh, planned on a 7.9-acre (72,185 sqm) site on the bank of the Gomti river, as part of the wider Shalimar One World masterplan. Altamash contributed to the project during his time at Architect Hafeez Contractor, working across site and context analysis, residential tower and apartment planning, massing comparisons, and FSI planning.",
+    cover: img(
+      "shalimar-one-world-group-housing",
+      "cover.jpg",
+      2000,
+      1165,
+      "Conceptual exterior render of the Shalimar One World Group Housing towers along a landscaped boulevard",
+    ),
+    gallery: [
+      img("shalimar-one-world-group-housing", "01.jpg", 1900, 1084, "Site zoning, sun-path, site-extents, plot-layout, location and conceptual massing diagrams for Shalimar One World Group Housing", "Site & context analysis"),
+      img("shalimar-one-world-group-housing", "02.jpg", 1700, 1638, "Typical floor plan of Tower A at Shalimar One World Group Housing, showing 3BHK+Servant (Small) and 2BHK+Study apartment layouts around a shared lift core", "Tower A — typical floor plan"),
+      img("shalimar-one-world-group-housing", "03.jpg", 1700, 1638, "Typical floor plan of Tower B at Shalimar One World Group Housing, showing 3BHK+Servant (Medium) and 3BHK apartment layouts", "Tower B — typical floor plan"),
+      img("shalimar-one-world-group-housing", "04.jpg", 1700, 1638, "Typical floor plan of Tower C at Shalimar One World Group Housing, showing 3BHK+Servant (Ultima) and 3BHK apartment layouts", "Tower C — typical floor plan"),
+      img("shalimar-one-world-group-housing", "05.jpg", 1700, 1676, "Combined floor plans of Towers D and E at Shalimar One World Group Housing, stacking multiple apartment typologies around shared cores and corridors", "Towers D & E — combined block plans"),
+      img("shalimar-one-world-group-housing", "06.jpg", 1900, 1226, "Comparative massing study of merged versus separated tower blocks for Shalimar One World Group Housing", "Comparative massing study"),
+    ],
+    story: [
+      {
+        heading: "Site & Context Analysis",
+        body: "The scheme was studied against its context within the wider Shalimar One World masterplan on the bank of the Gomti river in Lucknow, alongside the adjoining Valencia phases and the One World commercial towers. Zoning, sun-path and site-extents studies mapped the plot's orientation, seasonal sun angles and proximity to nearby landmarks, while plot-layout and location studies fixed the site against the riverfront edge. A conceptual massing study then translated these constraints into an initial tower arrangement across the plot.",
+      },
+      {
+        heading: "Tower A — Typical Floor Plan",
+        body: "Tower A was planned as a point block with a mix of 3BHK+Servant (Small) and 2BHK+Study apartments arranged around a central core of three passenger lifts and a dedicated fire lift, giving every unit direct daylight and cross-ventilation.",
+      },
+      {
+        heading: "Tower B — Typical Floor Plan",
+        body: "Tower B carries a larger floor plate with 3BHK+Servant (Medium) and 3BHK apartment types, organised around the same three-lift-and-fire-lift core arrangement used across the tower family for consistency of servicing and egress.",
+      },
+      {
+        heading: "Tower C — Typical Floor Plan",
+        body: "Tower C introduces the largest apartment typology in the scheme, 3BHK+Servant (Ultima), alongside 3BHK units, again planned around a shared core. Towers A, B and C together form the principal tower cluster on Plot A.",
+      },
+      {
+        heading: "Towers D & E — Combined Block Plans",
+        body: "Towers D and E were developed as combined-block typologies on Plot B, stacking 3BHK+Servant (Small/Medium), 3BHK and 2BHK+Study apartments around shared fire-rated corridors and dual cores, testing a higher-density block configuration alongside the point towers of Plot A.",
+      },
+      {
+        heading: "Comparative Massing Study",
+        body: "Two massing options were studied for the site: one with merged, combined tower blocks and one with fully separated point towers. The comparison weighed built form, tower spacing, open space and site circulation against the same total unit count, informing the tower arrangement taken forward.",
+      },
+      {
+        heading: "FSI & Planning Summary",
+        body: "Across Plot A (Towers A, B and C) and Plot B (Towers D, E and F), the project's area statement worked out to a combined FSI consumption of approximately 2,96,612 sq.m (about 3.19 million sq.ft) against a permissible FSI of approximately 2,98,926 sq.m (about 3.22 million sq.ft), keeping the overall massing within the site's development potential across the residential towers, club house and entrance-hall areas.",
+      },
+      {
+        heading: "My Contribution",
+        body: "Contributed to Shalimar One World – Group Housing during his time at Architect Hafeez Contractor, covering site and context analysis, residential tower and apartment planning across five tower typologies (Towers A through E), unit-mix and layout optimisation, conceptual massing comparisons, area statements and FSI calculations, and the preparation and coordination of architectural drawings and presentation material.",
+      },
+      {
+        heading: "Sources & Credits",
+        body: "Project drawings and figures are adapted from internal presentation material prepared at Architect Hafeez Contractor; the drawings shown here have been cropped and isolated from their original page layout for this portfolio and do not reproduce the source material's page design, branding or office stamps. Supplementary public context on Shalimar One World and its Lucknow riverfront location is drawn from Shalimar Corp's official project channels. This page describes Altamash's personal contribution to the project only.",
+      },
+    ],
+    specs: [
+      { label: "Type", value: "Residential, Group Housing" },
+      { label: "Location", value: "Lucknow, U.P." },
+      { label: "Site", value: "7.9 acres (72,185 sqm)" },
+      { label: "Status", value: "Design Development" },
+      { label: "Role", value: "Architect Hafeez Contractor" },
+    ],
   },
-  
-
-    {
+  {
     slug: "monte-south-residential-tower",
     title: "Monte South Residential Tower",
     category: "Residential",
     location: "Byculla, Mumbai",
     year: "2023",
     status: "Design Development",
-      featured: true,
+    workType: "Architectural",
+    featured: true,
     summary: "An award-winning luxury tower rising over the old Khatau Mills.",
     intro:
       "Monte South is an award-winning luxury development near South Mumbai at Byculla, spread across a 12.5-acre plot of the historic Khatau Mills. Four residential towers of 60-plus storeys hold ultra-spacious homes above a podium beach and amazon-themed landscaping. Altamash worked on the project during his time at Architect Hafeez Contractor.",
@@ -252,6 +257,7 @@ export const projects: Project[] = [
     location: "Lucknow",
     year: "2023",
     status: "Design Development",
+    workType: "Architectural",
     featured: true,
     summary: "Four riverfront commercial towers on the bank of the Gomti.",
     intro:
@@ -290,12 +296,103 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "corte-vetro-villa",
+    title: "Corte Vetro Villa",
+    category: "Interior",
+    location: "Alshamal, Qatar",
+    year: "2026",
+    status: "Completed",
+    workType: "Interior",
+    featured: false,
+    summary:
+      "A private residence in Alshamal, Qatar: separate men's and women's majlis wings, a family living wing and a wellness suite, held together by walnut, travertine and brass.",
+    intro:
+      "Corte Vetro Villa is a private residence in Alshamal, Qatar, designed for owner Salem Al-Ghanim, in association with Kayan and architect Bashar A. Al-Salem. Altamash led the interior architecture and design team on the project, covering 3D modelling and visualisation, mood boards, client meetings, and construction drawings across the villa's reception, family and wellness wings.",
+    cover: img(
+      "corte-vetro-villa",
+      "cover.jpg",
+      960,
+      1600,
+      "Grand entrance hall of Corte Vetro Villa, with book-matched travertine walls, brass sconces and a framed view to the garden",
+    ),
+    gallery: [
+      img("corte-vetro-villa", "01.jpg", 1600, 900, "Men's majlis at Corte Vetro Villa, with a curved wood-panelled ceiling, backlit display wall and a suspended arc floor lamp", "Men's majlis"),
+      img("corte-vetro-villa", "02.jpg", 1600, 1600, "Women's majlis at Corte Vetro Villa, a symmetrical seating hall in travertine and walnut with layered ambient lighting", "Women's majlis"),
+      img("corte-vetro-villa", "03.jpg", 1410, 1600, "Master living area at Corte Vetro Villa with a curved ceiling, boucle daybed, suspended arc lamp and integrated fireplace", "Master suite — private living area"),
+      img("corte-vetro-villa", "04.jpg", 1600, 900, "Master bedroom and dressing area at Corte Vetro Villa, with full-height glazing, sheer drapery and a built-in display wall", "Master bedroom & dressing"),
+      img("corte-vetro-villa", "05.jpg", 1600, 1600, "Master bathroom at Corte Vetro Villa with a floating book-matched stone vanity and backlit mirror walls", "Master bathroom"),
+      img("corte-vetro-villa", "06.jpg", 1600, 1600, "Kitchen and family lounge at Corte Vetro Villa, centred on a dramatic veined marble island and backlit fluted glass panel", "Kitchen & family lounge"),
+      img("corte-vetro-villa", "07.jpg", 1600, 900, "Family lounge at Corte Vetro Villa opening onto an internal planted courtyard behind a woven brass screen", "Lounge & family living"),
+      img("corte-vetro-villa", "08.jpg", 1600, 1600, "Home gym and spa at Corte Vetro Villa behind timber louvred blinds with natural stone accent walls", "Wellness: gym & spa"),
+      img("corte-vetro-villa", "09.jpg", 1600, 1600, "Lift and staircase core at Corte Vetro Villa in book-matched stone and bronze-finished panelling", "Circulation: lift & staircase"),
+      img("corte-vetro-villa", "10.jpg", 1481, 1600, "A children's bedroom at Corte Vetro Villa with a custom wall mural and bespoke joinery", "Family bedrooms"),
+    ],
+    story: [
+      {
+        heading: "Overview",
+        body: "Corte Vetro Villa is a private residence in Alshamal, Qatar, built for owner Salem Al-Ghanim across two levels of formal reception, family living and wellness space. The brief called for a home able to host separate men's and women's majlis gatherings in the Gulf tradition alongside a calmer, warmer world for daily family life — two registers of hospitality under one roof.",
+      },
+      {
+        heading: "Design Concept",
+        body: "The design holds every space to a single material language — walnut, travertine and brass — and lets scale and light do the work of distinguishing formal from informal. Reception rooms are generous, symmetrical and high-ceilinged; family spaces are lower, warmer and more textured, so the shift from hosting to living is felt rather than announced.",
+      },
+      {
+        heading: "Materials & Palette",
+        body: "A consistent material palette runs through the house: book-matched travertine and richly veined marble against rift-cut walnut panelling, brushed brass and bronze fixtures, and boucle, wool and camel-toned upholstery. Cove-lit ceilings and slim brass pendants keep the lighting layered and indirect rather than relying on a single fixture, so every room reads calm after dark.",
+      },
+      {
+        heading: "The Private Wing: Master Suite",
+        body: "The master bedroom is planned around a curved plaster ceiling detail and a suspended arc lamp, with a built-in fireplace and a rounded boucle daybed forming a private sitting area distinct from the sleeping zone. Sheer drapery and full-height glazing keep the room in daylight while framing views out to the garden.",
+      },
+      {
+        heading: "Master Bathroom",
+        body: "The master bathroom continues the material language of the bedroom: a floating book-matched stone vanity, backlit mirror walls and brass fittings replace applied ornament with the pattern of the stone itself, keeping the room spa-like and restrained.",
+      },
+      {
+        heading: "Kitchen & Family Lounge",
+        body: "A dramatic veined marble island anchors the kitchen and doubles as the everyday family table, set against a backlit fluted glass panel and walnut millwork with open display shelving. It is the most tactile material moment in the house, deliberately placed where the family gathers daily rather than in a formal room.",
+      },
+      {
+        heading: "Lounge & Family Living",
+        body: "A double-height family lounge opens onto an internal planted courtyard behind a woven brass screen, bringing daylight and greenery into the deepest part of the plan. Low, deep seating and a sculptural bronze wall piece keep the room informal against the more ceremonial majlis spaces elsewhere in the house.",
+      },
+      {
+        heading: "Wellness: Gym & Spa",
+        body: "The wellness suite pairs a full home gym with a spa, set behind timber louvred blinds that filter daylight across the space. Natural stone accent walls and warm timber ceiling panels carry the house's material language into a space built for daily use rather than display.",
+      },
+      {
+        heading: "Circulation: Lift & Staircase",
+        body: "The lift and stair core is treated as its own set piece, in book-matched stone and bronze-finished panelling with a floating timber-clad stair, so the vertical circulation between the villa's formal and private levels feels considered rather than incidental.",
+      },
+      {
+        heading: "Family Bedrooms",
+        body: "Each of the children's bedrooms was given its own identity within the shared material palette, from custom wall murals to bespoke joinery, so the family wing stays playful without breaking from the calm, tactile language established across the rest of the house.",
+      },
+      {
+        heading: "My Contribution",
+        body: "Altamash led the interior architecture and design team on Corte Vetro Villa, working alongside Kayan and architect Bashar A. Al-Salem. His role spanned 3D modelling and visualisation across all interior zones, mood board and material direction, client meetings, and construction drawings, shaping the project from early concept through to detailed documentation.",
+      },
+      {
+        heading: "Sources & Credits",
+        body: "Corte Vetro Villa, Alshamal, Qatar, for owner Salem Al-Ghanim, designed in association with Kayan and architect Bashar A. Al-Salem. All renders shown are original visualisation work produced for the project and do not reproduce any client-confidential drawings or documents beyond the presentation imagery itself.",
+      },
+    ],
+    specs: [
+      { label: "Type", value: "Residential Interior" },
+      { label: "Location", value: "Alshamal, Qatar" },
+      { label: "Client", value: "Salem Al-Ghanim" },
+      { label: "Status", value: "Completed" },
+      { label: "Role", value: "Kayan, with architect Bashar A. Al-Salem" },
+    ],
+  },
+  {
     slug: "inter-state-bus-terminal",
     title: "Inter State Bus Terminal",
     category: "Transit",
     location: "Lucknow, U.P.",
     year: "2022",
     status: "Concept",
+    workType: "Competition",
     featured: true,
     summary: "A calm, legible gateway for the Purvanchal expressway.",
     intro:
@@ -339,6 +436,7 @@ export const projects: Project[] = [
     location: "Mumbai",
     year: "2021",
     status: "Concept",
+    workType: "Competition",
     featured: true,
     summary: "A cluster of gridshell domes around a sculptural canopy.",
     intro:
@@ -382,6 +480,7 @@ export const projects: Project[] = [
     location: "Lucknow",
     year: "2021",
     status: "Concept",
+    workType: "Competition",
     featured: true,
     summary: "A symbolic mixed-use tower for a new city skyline.",
     intro:
@@ -431,6 +530,10 @@ export function getProject(slug: string): Project | undefined {
 
 export function getFeaturedProjects(): Project[] {
   return projects.filter((p) => p.featured);
+}
+
+export function getProjectsByWorkType(workType: Project["workType"]): Project[] {
+  return projects.filter((p) => p.workType === workType);
 }
 
 /** Previous / next project for case-study navigation (wraps around). */
