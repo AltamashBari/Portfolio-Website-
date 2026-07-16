@@ -298,15 +298,16 @@ export const projects: Project[] = [
     cover: img(
       "sky-residences",
       "cover.jpg",
-      1600,
-      1800,
-      "Illustrative diagram of the Sky Residences towers and podium at Expo City Dubai, created for this portfolio and not an official render",
+      2000,
+      1127,
+      "Official render of the Sky Residences towers and landscaped retail promenade at Expo City Dubai",
     ),
     gallery: [
-      img("sky-residences", "01.jpg", 1900, 1344, "Illustrative massing and context diagram of the Sky Residences towers around Al Wasl Plaza, Expo City Dubai", "Massing & context, illustrative diagram"),
+      img("sky-residences", "01.jpg", 1830, 1066, "Aerial site plan of the Expo City Dubai masterplan showing the Sky Residences district", "Expo City Dubai masterplan, official image"),
       img("sky-residences", "02.jpg", 1900, 1344, "Diagram illustrating role progression from BIM Architect / BIM Specialist to Arch & Facade Lead on Sky Residences", "Role progression, 2025"),
       img("sky-residences", "03.jpg", 1900, 1344, "Diagram of the LOD 400 multidisciplinary package scope across Architecture, Facade, Interior Design, Structure, MEP, Landscape and specialist packages", "LOD 400 package scope"),
       img("sky-residences", "04.jpg", 1900, 1344, "Diagram of BIM package coordination and discipline interfaces across AR, FC, ID, ST, MEP and LA", "BIM package & discipline coordination"),
+      img("sky-residences", "05.jpg", 365, 547, "Aerial view of Expo City Dubai showing the Sky Residences towers within the wider masterplan", "Expo City Dubai aerial context, official image"),
     ],
     story: [
       {
@@ -335,7 +336,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Sources & Image Credits",
-        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. Diagrams on this page are original illustrations created for this portfolio; they do not reproduce any confidential project model, drawing, or document, and are not official renders. Project information is credited to Expo City Dubai and its appointed design and consultant team; the content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
+        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. The cover render, masterplan aerial and aerial context image on this page are official Expo City Dubai marketing images, credited to Expo City Dubai and its design and consultant team. The role-progression, LOD 400 scope and BIM coordination diagrams are original illustrations created for this portfolio and do not reproduce any confidential project model, drawing, or document. The content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
       },
     ],
     specs: [
