@@ -19,6 +19,9 @@ interface FloatingRowProps {
   numbered?: boolean;
 }
 
+/** Minimum pointer travel, in px, before a press is treated as a drag rather than a click. */
+const DRAG_THRESHOLD = 6;
+
 /**
  * A horizontally drifting, seamlessly looping strip of project cards -
  * the "Selected Works" floating gallery. Pauses on hover/focus, scrubs with
@@ -43,9 +46,11 @@ export function FloatingRow({
   const x = useMotionValue(0);
   const halfWidth = useRef(0);
   const paused = useRef(false);
+  const pressed = useRef(false);
   const dragging = useRef(false);
   const dragStartX = useRef(0);
   const dragStartValue = useRef(0);
+  const pointerId = useRef<number | null>(null);
 
   useEffect(() => {
     if (!window.matchMedia) return;
@@ -74,18 +79,33 @@ export function FloatingRow({
 
   const staticFallback = reduce || isCoarse || projects.length <= 1;
 
+  // Pointer handling distinguishes a click (no capture, lets the underlying
+  // Link navigate normally) from a drag (only engaged once the pointer has
+  // travelled past DRAG_THRESHOLD). Capturing the pointer - and thus
+  // rerouting the eventual click target to this container - on every single
+  // press previously broke plain clicks on the cards.
   function onPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
     if (staticFallback) return;
-    dragging.current = true;
-    paused.current = true;
+    pressed.current = true;
+    dragging.current = false;
     dragStartX.current = e.clientX;
     dragStartValue.current = x.get();
-    e.currentTarget.setPointerCapture?.(e.pointerId);
+    pointerId.current = e.pointerId;
   }
 
   function onPointerMove(e: ReactPointerEvent<HTMLDivElement>) {
-    if (!dragging.current || !halfWidth.current) return;
+    if (!pressed.current || !halfWidth.current) return;
     const delta = e.clientX - dragStartX.current;
+
+    if (!dragging.current) {
+      if (Math.abs(delta) < DRAG_THRESHOLD) return;
+      dragging.current = true;
+      paused.current = true;
+      if (pointerId.current !== null) {
+        e.currentTarget.setPointerCapture?.(pointerId.current);
+      }
+    }
+
     let next = dragStartValue.current + delta;
     while (next <= -halfWidth.current) next += halfWidth.current;
     while (next >= 0) next -= halfWidth.current;
@@ -93,6 +113,7 @@ export function FloatingRow({
   }
 
   function endDrag() {
+    pressed.current = false;
     dragging.current = false;
     paused.current = false;
   }
