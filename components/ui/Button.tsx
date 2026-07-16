@@ -40,7 +40,7 @@ export function Button({
     <ArrowRight
       size={16}
       weight="regular"
-      className="transition-transform duration-300 group-hover:translate-x-1"
+      className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-1 group-hover:scale-125"
     />
   ) : null;
 
