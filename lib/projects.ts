@@ -7,8 +7,7 @@ numbered sheets (01.jpg ...) are the presentation sheets shown in the case
 study. To update a project, edit its object and drop new files in its folder.
 */
 
-function img
-  folder: string,
+function img(  folder: string,
   file: string,
   width: number,
   height: number,
