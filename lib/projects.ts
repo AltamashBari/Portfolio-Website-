@@ -24,7 +24,7 @@ export const projects: Project[] = [
     category: "Residential",
     location: "Expo City Dubai, UAE",
     year: "2025",
-    status: "In Progress",
+    status: "Design Development",
     featured: true,
     summary:
       "Multidisciplinary LOD 400 BIM coordination across architecture, facade, interiors, structure, MEP and landscape for a residential community at Expo City Dubai.",
@@ -132,8 +132,8 @@ export const projects: Project[] = [
         category: "Residential",
         location: "Lucknow, U.P.",
         year: "2024",
-        status: "Concept",
-        featured: true,
+        status: "Design Development",
+   featured: true,
         summary:
                 "A large-scale group-housing development in Lucknow: site analysis, five tower typologies, apartment-mix studies, massing comparisons and FSI planning across a 7.9-acre riverside plot.",
         intro:
@@ -195,7 +195,7 @@ export const projects: Project[] = [
           { label: "Type", value: "Residential, Group Housing" },
           { label: "Location", value: "Lucknow, U.P." },
           { label: "Site", value: "7.9 acres (72,185 sqm)" },
-          { label: "Status", value: "Conceptual planning stage" },
+          { label: "Status", value: "Design Development" },
           { label: "Role", value: "Architect Hafeez Contractor" },
               ],
   },
@@ -207,8 +207,8 @@ export const projects: Project[] = [
     category: "Residential",
     location: "Byculla, Mumbai",
     year: "2023",
-    status: "In Progress",
-    featured: true,
+    status: "Design Development",
+      featured: true,
     summary: "An award-winning luxury tower rising over the old Khatau Mills.",
     intro:
       "Monte South is an award-winning luxury development near South Mumbai at Byculla, spread across a 12.5-acre plot of the historic Khatau Mills. Four residential towers of 60-plus storeys hold ultra-spacious homes above a podium beach and amazon-themed landscaping. Altamash worked on the project during his time at Architect Hafeez Contractor.",
