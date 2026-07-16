@@ -35,10 +35,10 @@ export default function ResumePage() {
                 {profile.email}
               </a>
               <a
-                href={`tel:${profile.phoneIN.replace(/\s+/g, "")}`}
+                href={`tel:${profile.phoneUAE.replace(/\s+/g, "")}`}
                 className="hover:text-olive-soft"
               >
-                {profile.phoneIN}
+                {profile.phoneUAE}
               </a>
               <span>{profile.location}</span>
             </div>
