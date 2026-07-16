@@ -127,8 +127,8 @@ export const projects: Project[] = [
       { label: "Capacity", value: "300 beds" },
       { label: "Year", value: "2024" },
     ],
-    {
-        slug: "shalimar-one-world-group-housing",
+  },
+  {slug: "shalimar-one-world-group-housing",
         title: "Shalimar One World – Group Housing",
         category: "Residential",
         location: "Lucknow, U.P.",
@@ -201,8 +201,8 @@ export const projects: Project[] = [
               ],
   },
   
-    },
-  {
+
+    {
     slug: "monte-south-residential-tower",
     title: "Monte South Residential Tower",
     category: "Residential",
