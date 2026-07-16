@@ -27,11 +27,10 @@ export const profile = {
   intro:
     "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and façade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
   email: "Barialt0786@gmail.com",
-  phoneUAE: "+971 54 720 4196",
-  phoneIN: "+91 70077 01513",
+  phoneUAE: "+971 56 830 4363",
   linkedin: "https://www.linkedin.com/in/altamash-bari-2b7733201",
   issuu: "https://issuu.com/altamashbari/docs/altamash_bari_portfolio_",
-  location: "Deoria, Uttar Pradesh, India",
+  location: "Dubai, UAE",
   availability: "Open to work across India and the UAE",
   degree: "Bachelor of Architecture, Integral University, Lucknow",
 };
@@ -185,7 +184,7 @@ export const faqs: Faq[] = [
   {
     question: "Who is Altamash Bari?",
     answer:
-      "Altamash Bari is an architect based in Deoria, Uttar Pradesh, India, and available across the UAE. A Bachelor of Architecture from Integral University, Lucknow, he trained at Architect Hafeez Contractor in Mumbai and designs across healthcare, transit, residential, and commercial architecture.",
+      "Altamash Bari is an architect based in Dubai, UAE, and available for work across India and the UAE. A Bachelor of Architecture from Integral University, Lucknow, he trained at Architect Hafeez Contractor in Mumbai and designs across healthcare, transit, residential, and commercial architecture.",
   },
   {
     question: "What kind of projects does Altamash Bari design?",
@@ -195,7 +194,7 @@ export const faqs: Faq[] = [
   {
     question: "Where is Altamash Bari based and is he available for work?",
     answer:
-      "He is based in Deoria, Uttar Pradesh, India, and is open to architecture opportunities across India and the UAE. He can be reached at Barialt0786@gmail.com or on LinkedIn.",
+      "He is based in Dubai, UAE, and is open to architecture opportunities across India and the UAE. He can be reached at Barialt0786@gmail.com or on LinkedIn.",
   },
   {
     question: "What software and tools does Altamash Bari use?",

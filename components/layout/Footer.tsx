@@ -41,11 +41,6 @@ export function Footer() {
                     {profile.phoneUAE}
                   </a>
                 </li>
-                <li>
-                  <a href={`tel:${profile.phoneIN.replace(/\s+/g, "")}`} className="transition-colors hover:text-olive-soft">
-                    {profile.phoneIN}
-                  </a>
-                </li>
               </ul>
             </div>
 

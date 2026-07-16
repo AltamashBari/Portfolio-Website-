@@ -25,7 +25,7 @@ export function personJsonLd() {
     url: SITE_URL,
     email: `mailto:${profile.email}`,
     image: absoluteUrl("/portfolio/altamash.jpg"),
-    telephone: profile.phoneIN,
+    telephone: profile.phoneUAE,
     sameAs: [profile.linkedin, profile.issuu],
     knowsAbout: [
       "Architecture",
@@ -46,9 +46,8 @@ export function personJsonLd() {
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Deoria",
-      addressRegion: "Uttar Pradesh",
-      addressCountry: "IN",
+      addressLocality: "Dubai",
+      addressCountry: "AE",
     },
     workLocation: [
       { "@type": "Place", name: "India" },
