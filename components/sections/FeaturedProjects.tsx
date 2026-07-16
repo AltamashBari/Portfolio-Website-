@@ -2,21 +2,19 @@ import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { ProjectCard } from "@/components/sections/ProjectCard";
+import { FloatingRow } from "@/components/sections/FloatingRow";
 import { getFeaturedProjects } from "@/lib/projects";
 
-/** Asymmetric magazine grid - varied spans, aspects, and vertical offsets. */
-const layout = [
-  { span: "lg:col-span-7", aspect: "aspect-[16/11]", offset: "" },
-  { span: "lg:col-span-5", aspect: "aspect-[4/5]", offset: "lg:mt-28" },
-  { span: "lg:col-span-5", aspect: "aspect-[4/5]", offset: "" },
-  { span: "lg:col-span-7", aspect: "aspect-[16/11]", offset: "lg:mt-28" },
-  { span: "lg:col-span-6", aspect: "aspect-[3/2]", offset: "" },
-  { span: "lg:col-span-6", aspect: "aspect-[3/2]", offset: "lg:mt-28" },
-];
-
+/**
+ * Homepage "Selected work" teaser: the same floating-row gallery used on
+ * /projects, scoped to featured projects. The Interior Design row only
+ * appears once a featured interior project exists, so no empty row shows.
+ */
 export function FeaturedProjects() {
-  const projects = getFeaturedProjects();
+  const featured = getFeaturedProjects();
+  const architectural = featured.filter((p) => p.workType === "Architectural");
+  const interior = featured.filter((p) => p.workType === "Interior");
+  const competition = featured.filter((p) => p.workType === "Competition");
 
   return (
     <section id="work" className="bg-canvas py-[var(--spacing-section)]">
@@ -36,31 +34,34 @@ export function FeaturedProjects() {
             />
           </Link>
         </Reveal>
-
-        <div className="mt-14 grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:mt-20 lg:grid-cols-12 lg:gap-y-8">
-          {projects.map((project, i) => {
-            const spec = layout[i % layout.length];
-            return (
-              <Reveal
-                key={project.slug}
-                delay={i % 2 === 1 ? 0.08 : 0}
-                className={`${spec.span} ${spec.offset}`}
-              >
-                <ProjectCard
-                  project={project}
-                  aspectClass={spec.aspect}
-                  priority={i === 0}
-                  sizes={
-                    i === 0
-                      ? "(max-width: 1024px) 100vw, 58vw"
-                      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
-                  }
-                />
-              </Reveal>
-            );
-          })}
-        </div>
       </Container>
+
+      <div className="mt-14 lg:mt-20">
+        <FloatingRow
+          label="Architectural Projects"
+          projects={architectural}
+          direction="left"
+          speed={24}
+          priority
+          numbered={false}
+        />
+        {interior.length > 0 && (
+          <FloatingRow
+            label="Interior Design"
+            projects={interior}
+            direction="right"
+            speed={20}
+            numbered={false}
+          />
+        )}
+        <FloatingRow
+          label="Design Competition Entries"
+          projects={competition}
+          direction="left"
+          speed={28}
+          numbered={false}
+        />
+      </div>
     </section>
   );
 }
