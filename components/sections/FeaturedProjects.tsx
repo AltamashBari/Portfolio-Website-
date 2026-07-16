@@ -30,7 +30,7 @@ export function FeaturedProjects() {
             All projects
             <ArrowRight
               size={16}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-1 group-hover:scale-125"
             />
           </Link>
         </Reveal>
@@ -41,7 +41,7 @@ export function FeaturedProjects() {
           label="Architectural Projects"
           projects={architectural}
           direction="left"
-          speed={24}
+          speed={32}
           priority
           numbered={false}
         />
@@ -50,7 +50,7 @@ export function FeaturedProjects() {
             label="Interior Design"
             projects={interior}
             direction="right"
-            speed={20}
+            speed={28}
             numbered={false}
           />
         )}
@@ -58,7 +58,7 @@ export function FeaturedProjects() {
           label="Design Competition Entries"
           projects={competition}
           direction="left"
-          speed={28}
+          speed={38}
           numbered={false}
         />
       </div>

@@ -13,7 +13,11 @@ export function ProjectNav({ prev, next }: { prev: Project; next: Project }) {
             className="group flex flex-col gap-3 py-14 md:pr-12"
           >
             <span className="flex items-center gap-2 text-sm text-taupe">
-              <ArrowLeft size={14} /> Previous
+              <ArrowLeft
+                size={14}
+                className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-1 group-hover:scale-125"
+              />{" "}
+              Previous
             </span>
             <span className="font-display text-2xl text-ink transition-colors group-hover:text-olive md:text-3xl">
               {prev.title}
@@ -25,7 +29,11 @@ export function ProjectNav({ prev, next }: { prev: Project; next: Project }) {
             className="group flex flex-col gap-3 py-14 md:items-end md:pl-12"
           >
             <span className="flex items-center gap-2 text-sm text-taupe">
-              Next <ArrowRight size={14} />
+              Next{" "}
+              <ArrowRight
+                size={14}
+                className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-1 group-hover:scale-125"
+              />
             </span>
             <span className="font-display text-2xl text-ink transition-colors group-hover:text-olive md:text-right md:text-3xl">
               {next.title}

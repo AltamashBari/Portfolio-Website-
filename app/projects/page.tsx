@@ -41,7 +41,7 @@ export default function ProjectsPage() {
           label="Architectural Projects"
           projects={architectural}
           direction="left"
-          speed={26}
+          speed={34}
           priority
         />
         <FloatingRow
@@ -49,14 +49,14 @@ export default function ProjectsPage() {
           label="Interior Design"
           projects={interior}
           direction="right"
-          speed={22}
+          speed={30}
         />
         <FloatingRow
           index={3}
           label="Design Competition Entries"
           projects={competition}
           direction="left"
-          speed={30}
+          speed={40}
         />
       </section>
     </>

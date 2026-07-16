@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/lib/types";
 
 interface FloatingProjectCardProps {
@@ -45,8 +46,13 @@ export function FloatingProjectCard({ project, priority = false }: FloatingProje
           {project.category}
           {project.location ? <>&nbsp;&middot; {project.location}</> : null}
         </p>
-        <span className="label-eyebrow shrink-0 text-[0.6rem] text-taupe transition-colors duration-300 group-hover:text-olive">
+        <span className="label-eyebrow flex shrink-0 items-center gap-1 text-[0.6rem] text-taupe transition-colors duration-300 group-hover:text-olive">
           View Project
+          <ArrowRight
+            size={12}
+            weight="bold"
+            className="transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-1 group-hover:scale-125"
+          />
         </span>
       </div>
     </Link>
