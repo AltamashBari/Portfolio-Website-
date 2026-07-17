@@ -3,6 +3,7 @@ import { Archivo, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CustomCursor } from "@/components/motion/CustomCursor";
 import { faqs, profile } from "@/lib/content";
 import { faqJsonLd, personJsonLd, SITE_URL } from "@/lib/seo";
 
@@ -88,6 +89,7 @@ export default function RootLayout({
         >
           Skip to content
         </a>
+        <CustomCursor />
         <Header />
         <main id="main" className="flex-1">
           {children}

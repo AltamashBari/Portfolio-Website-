@@ -9,13 +9,14 @@
 
 @theme {
   /* Neutrals (warm) */
-  --color-canvas: #f4f0e8; /* page background - warm off-white paper */
-  --color-sand: #ebe3d6; /* soft section tint */
-  --color-stone: #dccfbd; /* hairlines, muted fields */
+  --color-canvas: #f7f4ee; /* page background - light warm off-white, no yellow/pink cast */
+  --color-elevated: #fbf9f5; /* elevated surfaces - cards, panels, raised sheets */
+  --color-sand: #efeae0; /* soft section tint */
+  --color-stone: #e2d9c8; /* hairlines, muted fields */
   --color-taupe: #6d6152; /* secondary / meta text - AA on canvas & sand */
   --color-brown: #4a3f34; /* deep brown - body copy */
-  --color-charcoal: #33302a; /* dark band background */
-  --color-ink: #201d18; /* primary text + darkest surface */
+  --color-charcoal: #33302a; /* dark band background - warm charcoal, never harsh black */
+  --color-ink: #211f1c; /* primary text + darkest surface */
 
   /* Single accent - muted olive (AA as text on canvas & sand) */
   --color-olive: #605d37;

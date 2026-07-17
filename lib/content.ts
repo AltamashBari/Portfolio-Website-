@@ -25,7 +25,7 @@ export const profile = {
     "Architect designing healthcare, transit, and skylines where clarity, climate, and human experience meet.",
   // Longer intro used in the About section.
   intro:
-    "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and façade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
+    "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and fa\u00e7ade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
   email: "Barialt0786@gmail.com",
   phoneUAE: "+971 56 830 4363",
   linkedin: "https://www.linkedin.com/in/altamash-bari-2b7733201",
@@ -80,56 +80,88 @@ export const capabilities: Capability[] = [
     description:
       "Revit and BIM 360 coordination with Lumion renders that let clients read a space before it is built.",
   },
+  {
+    title: "Dynamo & Scripting",
+    description:
+      "Custom Revit add-ins and Dynamo graphs that automate repetitive modelling and turn manual routines into smart, repeatable workflows.",
+  },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Architectural Intern",
+    role: "BIM Specialist | Architecture & Fa\u00e7ade Lead",
+    organisation: "iRivet Software House",
+    location: "Dubai, UAE",
+    period: "2025 \u2014 Present",
+    detail:
+      "Leading architectural and fa\u00e7ade BIM delivery to LOD400 across landmark developments including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers, running clash detection, IFC coordination and RFI resolution across teams of 10 to 14 while mentoring junior modellers.",
+  },
+  {
+    role: "Architectural Designer | Project Coordinator",
+    organisation: "Emissive Interiors & Fit-Out",
+    location: "Dubai, UAE",
+    period: "2024 \u2014 2025",
+    detail:
+      "Delivered interior and fit-out packages from concept through to shop drawings, coordinating MEP, running site inspections and snag lists, and preparing material boards and authority submissions across Dubai Municipality, Trakhees, DDA and Civil Defence, alongside client-facing presentations.",
+  },
+  {
+    role: "Architectural Assistant",
     organisation: "Architect Hafeez Contractor",
-    location: "Mumbai",
-    period: "2023",
+    location: "Mumbai, India",
+    period: "2023 \u2014 2024",
     detail:
-      "Worked inside one of India's most prolific practices on Shalimar One World, Marbella Towers, and Monte South, the award-winning South Mumbai residential landmark.",
+      "Produced working drawings, joinery details, GFC sets and 3D visuals inside one of India's most prolific practices, coordinating structural and MEP inputs, area and cost estimates, and authority submission drawings on major residential developments.",
   },
   {
-    role: "Row Housing & Plotting",
-    organisation: "Narayan Group",
-    location: "Lucknow",
-    period: "2023",
+    role: "Freelance & Remote Architectural Designer",
+    organisation: "Independent Practice",
+    location: "India",
+    period: "2020 \u2014 2023",
     detail:
-      "Partnership work on residential row housing layout and plotting for a Lucknow development.",
-  },
-  {
-    role: "Interior Design",
-    organisation: "Partnership Project",
-    location: "Gomtinagar, Lucknow",
-    period: "2022",
-    detail: "Full interior design for a private residence, from planning to material and joinery detail.",
-  },
-  {
-    role: "Facade Redesign",
-    organisation: "Freelance",
-    location: "Jankipuram, Lucknow",
-    period: "2021",
-    detail: "Redesigned the street-facing facade of an existing building for a sharper, calmer identity.",
-  },
-  {
-    role: "Interior Design",
-    organisation: "Freelance",
-    location: "Abubakar Nagar, Deoria",
-    period: "2020",
-    detail: "First independent commission, a residential interior delivered end to end.",
+      "Delivered four independent commissions end to end ahead of formal practice: a full residential interior in Gomtinagar, a street-facing fa\u00e7ade redesign in Jankipuram, a residential interior in Abubakar Nagar, Deoria, and row-housing and plotting layouts in partnership with Narayan Group \u2014 building a practical, client-facing design foundation from the ground up.",
   },
 ];
 
 export const stats: Stat[] = [
-  { value: "6", label: "Selected works across five sectors" },
-  { value: "300", label: "Bed hospital, designed in full" },
-  { value: "60", suffix: "+", label: "Storey towers worked on" },
-  { value: "9", label: "Design and BIM tools in daily use" },
+  {
+    value: "20",
+    suffix: "+",
+    tag: "PROJECTS LED & DELIVERED",
+    description: "Architectural, interior and BIM projects taken from concept through to delivery.",
+    label: "Architectural, interior and BIM projects taken from concept through to delivery.",
+  },
+  {
+    value: "4",
+    suffix: "+",
+    tag: "YEARS OF EXPERIENCE",
+    description: "Across architecture, interior design and BIM delivery in India and the UAE.",
+    label: "Across architecture, interior design and BIM delivery in India and the UAE.",
+  },
+  {
+    value: "5",
+    tag: "COUNTRIES",
+    description: "Design and delivery contexts worked across, from India to the wider Gulf region.",
+    label: "Design and delivery contexts worked across, from India to the wider Gulf region.",
+  },
+  {
+    value: "9",
+    tag: "DESIGN & BIM TOOLS",
+    description: "In daily use, from AutoCAD and Revit to Navisworks, Dynamo and Lumion.",
+    label: "In daily use, from AutoCAD and Revit to Navisworks, Dynamo and Lumion.",
+  },
 ];
 
 export const certifications: Certification[] = [
+  {
+    title: "Autodesk Certified Professional: Revit",
+    organisation: "Autodesk",
+    year: "2024",
+  },
+  {
+    title: "Autodesk Certified Professional: Navisworks",
+    organisation: "Autodesk",
+    year: "2024",
+  },
   {
     title: "BIM Architecture Professional Course",
     organisation: "Remote",

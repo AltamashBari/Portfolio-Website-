@@ -305,9 +305,9 @@ export const projects: Project[] = [
     workType: "Interior",
     featured: false,
     summary:
-      "A private residence in Alshamal, Qatar: separate men's and women's majlis wings, a family living wing and a wellness suite, held together by walnut, travertine and brass.",
+      "A private residence in Alshamal, Qatar, organised into seven distinct areas — reception, family living, the master suite, children's and guest wings, wellness, and circulation — held together by walnut, travertine and brass.",
     intro:
-      "Corte Vetro Villa is a private residence in Alshamal, Qatar, designed for owner Salem Al-Ghanim, in association with Kayan and architect Bashar A. Al-Salem. Altamash led the interior architecture and design team on the project, covering 3D modelling and visualisation, mood boards, client meetings, and construction drawings across the villa's reception, family and wellness wings.",
+      "Corte Vetro Villa is a private residence in Alshamal, Qatar, designed for owner Salem Al-Ghanim, in association with Kayan and architect Bashar A. Al-Salem. Altamash led the interior architecture and design team on the project, covering 3D modelling and visualisation, mood boards, client meetings, and construction drawings across the villa's reception, family, private and wellness wings.",
     cover: img(
       "corte-vetro-villa",
       "cover.jpg",
@@ -315,22 +315,11 @@ export const projects: Project[] = [
       1600,
       "Grand entrance hall of Corte Vetro Villa, with book-matched travertine walls, brass sconces and a framed view to the garden",
     ),
-    gallery: [
-      img("corte-vetro-villa", "01.jpg", 1600, 900, "Men's majlis at Corte Vetro Villa, with a curved wood-panelled ceiling, backlit display wall and a suspended arc floor lamp", "Men's majlis"),
-      img("corte-vetro-villa", "02.jpg", 1600, 1600, "Women's majlis at Corte Vetro Villa, a symmetrical seating hall in travertine and walnut with layered ambient lighting", "Women's majlis"),
-      img("corte-vetro-villa", "03.jpg", 1410, 1600, "Master living area at Corte Vetro Villa with a curved ceiling, boucle daybed, suspended arc lamp and integrated fireplace", "Master suite — private living area"),
-      img("corte-vetro-villa", "04.jpg", 1600, 900, "Master bedroom and dressing area at Corte Vetro Villa, with full-height glazing, sheer drapery and a built-in display wall", "Master bedroom & dressing"),
-      img("corte-vetro-villa", "05.jpg", 1600, 1600, "Master bathroom at Corte Vetro Villa with a floating book-matched stone vanity and backlit mirror walls", "Master bathroom"),
-      img("corte-vetro-villa", "06.jpg", 1600, 1600, "Kitchen and family lounge at Corte Vetro Villa, centred on a dramatic veined marble island and backlit fluted glass panel", "Kitchen & family lounge"),
-      img("corte-vetro-villa", "07.jpg", 1600, 900, "Family lounge at Corte Vetro Villa opening onto an internal planted courtyard behind a woven brass screen", "Lounge & family living"),
-      img("corte-vetro-villa", "08.jpg", 1600, 1600, "Home gym and spa at Corte Vetro Villa behind timber louvred blinds with natural stone accent walls", "Wellness: gym & spa"),
-      img("corte-vetro-villa", "09.jpg", 1600, 1600, "Lift and staircase core at Corte Vetro Villa in book-matched stone and bronze-finished panelling", "Circulation: lift & staircase"),
-      img("corte-vetro-villa", "10.jpg", 1481, 1600, "A children's bedroom at Corte Vetro Villa with a custom wall mural and bespoke joinery", "Family bedrooms"),
-    ],
+    gallery: [],
     story: [
       {
         heading: "Overview",
-        body: "Corte Vetro Villa is a private residence in Alshamal, Qatar, built for owner Salem Al-Ghanim across two levels of formal reception, family living and wellness space. The brief called for a home able to host separate men's and women's majlis gatherings in the Gulf tradition alongside a calmer, warmer world for daily family life — two registers of hospitality under one roof.",
+        body: "Corte Vetro Villa is a private residence in Alshamal, Qatar, built for owner Salem Al-Ghanim across two levels of formal reception, family living and wellness space. The brief called for a home able to host separate men's and women's majlis gatherings in the Gulf tradition alongside a calmer, warmer world for daily family life — two registers of hospitality under one roof. The house is organised below into seven areas, each with its own character within a single, consistent material language.",
       },
       {
         heading: "Design Concept",
@@ -341,32 +330,70 @@ export const projects: Project[] = [
         body: "A consistent material palette runs through the house: book-matched travertine and richly veined marble against rift-cut walnut panelling, brushed brass and bronze fixtures, and boucle, wool and camel-toned upholstery. Cove-lit ceilings and slim brass pendants keep the lighting layered and indirect rather than relying on a single fixture, so every room reads calm after dark.",
       },
       {
-        heading: "The Private Wing: Master Suite",
-        body: "The master bedroom is planned around a curved plaster ceiling detail and a suspended arc lamp, with a built-in fireplace and a rounded boucle daybed forming a private sitting area distinct from the sleeping zone. Sheer drapery and full-height glazing keep the room in daylight while framing views out to the garden.",
+        heading: "01 — Arrival & Reception",
+        body: "The villa opens into its most ceremonial rooms first. Mirrored men's and women's majlis halls in travertine and walnut anchor the reception wing, each supported by its own washroom and prayer nook so a full evening of hosting never has to cross into the family's private spaces. A backlit perfume and scent bar greets guests just off the entrance, and a dedicated women's dining room, book-matched in stone beneath a sculptural chandelier, extends the formal register into a shared meal.",
+        images: [
+          img("corte-vetro-villa", "01.jpg", 1600, 900, "Men's majlis at Corte Vetro Villa, with a curved wood-panelled ceiling, backlit display wall and a suspended arc floor lamp", "Men's majlis"),
+          img("corte-vetro-villa", "02.jpg", 1600, 1600, "Women's majlis at Corte Vetro Villa, a symmetrical seating hall in travertine and walnut with layered ambient lighting", "Women's majlis"),
+          img("corte-vetro-villa", "11.jpg", 1600, 900, "Women's dining room at Corte Vetro Villa with a book-matched stone feature wall and a long table beneath a sculptural chandelier", "Women's dining"),
+          img("corte-vetro-villa", "12.jpg", 960, 1600, "Washroom and prayer nook off the majlis at Corte Vetro Villa, arched wood surround with a stone basin", "Majlis washroom & prayer nook"),
+          img("corte-vetro-villa", "13.jpg", 1383, 1600, "Perfume and scent display bar off the entrance at Corte Vetro Villa in backlit walnut joinery", "Entrance perfume bar"),
+        ],
       },
       {
-        heading: "Master Bathroom",
-        body: "The master bathroom continues the material language of the bedroom: a floating book-matched stone vanity, backlit mirror walls and brass fittings replace applied ornament with the pattern of the stone itself, keeping the room spa-like and restrained.",
+        heading: "02 — Family Living",
+        body: "Behind the reception wing, the house softens into where the family actually lives. A dramatic veined-marble island anchors the open kitchen and family lounge, doubling as the everyday table, while a separate chef's kitchen handles the heavier work out of sight. A roof-level pantry and laundry hall keeps daily logistics tucked away in the same warm oak language as the rooms it serves, and the lounge itself opens onto a planted internal courtyard behind a woven brass screen, keeping daylight and greenery at the centre of family life.",
+        images: [
+          img("corte-vetro-villa", "06.jpg", 1600, 1600, "Kitchen and family lounge at Corte Vetro Villa, centred on a dramatic veined marble island and backlit fluted glass panel", "Kitchen & family lounge"),
+          img("corte-vetro-villa", "07.jpg", 1600, 900, "Family lounge at Corte Vetro Villa opening onto an internal planted courtyard behind a woven brass screen", "Lounge & courtyard"),
+          img("corte-vetro-villa", "14.jpg", 1600, 991, "Chef's kitchen at Corte Vetro Villa in dark stone and matte walnut cabinetry", "Chef's kitchen"),
+          img("corte-vetro-villa", "15.jpg", 1280, 1600, "Roof-level pantry and laundry hall at Corte Vetro Villa in warm oak panelling", "Pantry & laundry"),
+        ],
       },
       {
-        heading: "Kitchen & Family Lounge",
-        body: "A dramatic veined marble island anchors the kitchen and doubles as the everyday family table, set against a backlit fluted glass panel and walnut millwork with open display shelving. It is the most tactile material moment in the house, deliberately placed where the family gathers daily rather than in a formal room.",
+        heading: "03 — Master Suite",
+        body: "The master suite is planned as a private wing of its own: a curved-ceiling sitting area with a suspended arc lamp and built-in fireplace, a bedroom held in full-height glazing and sheer drapery, a dedicated perfume and dressing zone, and a bathroom finished in book-matched stone with a floating vanity and backlit mirror walls. Every surface repeats the same material vocabulary as the rest of the house, scaled up for a room meant to be lived in daily rather than shown.",
+        images: [
+          img("corte-vetro-villa", "03.jpg", 1410, 1600, "Master living area at Corte Vetro Villa with a curved ceiling, boucle daybed, suspended arc lamp and integrated fireplace", "Master suite — private living area"),
+          img("corte-vetro-villa", "04.jpg", 1600, 900, "Master bedroom and dressing area at Corte Vetro Villa, with full-height glazing, sheer drapery and a built-in display wall", "Master bedroom & dressing"),
+          img("corte-vetro-villa", "05.jpg", 1600, 1600, "Master bathroom at Corte Vetro Villa with a floating book-matched stone vanity and backlit mirror walls", "Master bathroom"),
+          img("corte-vetro-villa", "16.jpg", 960, 1600, "Perfume and dressing display zone within the master suite at Corte Vetro Villa", "Master perfume & dressing zone"),
+        ],
       },
       {
-        heading: "Lounge & Family Living",
-        body: "A double-height family lounge opens onto an internal planted courtyard behind a woven brass screen, bringing daylight and greenery into the deepest part of the plan. Low, deep seating and a sculptural bronze wall piece keep the room informal against the more ceremonial majlis spaces elsewhere in the house.",
+        heading: "04 — Children's Wing",
+        body: "Four bedrooms and a shared play area give the villa's youngest residents a wing with its own identity, from a moon-and-cloud mural for the youngest room to a rose-toned scheme for a teenage bedroom and a walnut-and-grey palette for a second child's room. A ball-pit and climbing-wall play area sits alongside, keeping the wing playful without breaking from the calm, tactile material language established across the rest of the house.",
+        images: [
+          img("corte-vetro-villa", "10.jpg", 1481, 1600, "A children's bedroom at Corte Vetro Villa with a custom wall mural and bespoke joinery", "Children's bedroom"),
+          img("corte-vetro-villa", "17.jpg", 1600, 1600, "A children's bedroom at Corte Vetro Villa with a moon-and-cloud wall mural above the bed", "Moon & cloud bedroom"),
+          img("corte-vetro-villa", "18.jpg", 1600, 1524, "A teenage bedroom at Corte Vetro Villa in a rose and warm-neutral palette", "Teenage bedroom"),
+          img("corte-vetro-villa", "19.jpg", 1600, 1554, "A second children's bedroom at Corte Vetro Villa in walnut and warm grey tones", "Children's bedroom, walnut & grey"),
+          img("corte-vetro-villa", "20.jpg", 1280, 1600, "Children's play area at Corte Vetro Villa with a ball pit and climbing wall", "Play area"),
+        ],
       },
       {
-        heading: "Wellness: Gym & Spa",
-        body: "The wellness suite pairs a full home gym with a spa, set behind timber louvred blinds that filter daylight across the space. Natural stone accent walls and warm timber ceiling panels carry the house's material language into a space built for daily use rather than display.",
+        heading: "05 — Guest Wing",
+        body: "Two guest bedrooms, one on the ground floor and one on the first, are held to the same neutral, tactile palette as the family wing but pared back to let visiting guests feel at home without competing with the family's own rooms. A rounded mirror feature anchors the ground-floor room, while the first-floor room relies on built-in wardrobe joinery to keep the space uncluttered.",
+        images: [
+          img("corte-vetro-villa", "21.jpg", 1320, 1600, "Ground-floor guest bedroom at Corte Vetro Villa in a neutral palette with a rounded mirror feature", "Ground-floor guest bedroom"),
+          img("corte-vetro-villa", "22.jpg", 1280, 1600, "First-floor guest bedroom at Corte Vetro Villa with built-in wardrobe joinery", "First-floor guest bedroom"),
+        ],
       },
       {
-        heading: "Circulation: Lift & Staircase",
-        body: "The lift and stair core is treated as its own set piece, in book-matched stone and bronze-finished panelling with a floating timber-clad stair, so the vertical circulation between the villa's formal and private levels feels considered rather than incidental.",
+        heading: "06 — Wellness",
+        body: "The wellness suite pairs a full home gym with a spa and sauna, set behind timber louvred blinds that filter daylight across the space. Natural stone accent walls and warm timber ceiling panels carry the house's material language into a space built for daily use rather than display.",
+        images: [
+          img("corte-vetro-villa", "08.jpg", 1600, 1600, "Home gym and spa at Corte Vetro Villa behind timber louvred blinds with natural stone accent walls", "Gym & spa"),
+          img("corte-vetro-villa", "23.jpg", 1600, 1600, "Sauna within the wellness suite at Corte Vetro Villa, lined in warm timber", "Sauna"),
+        ],
       },
       {
-        heading: "Family Bedrooms",
-        body: "Each of the children's bedrooms was given its own identity within the shared material palette, from custom wall murals to bespoke joinery, so the family wing stays playful without breaking from the calm, tactile language established across the rest of the house.",
+        heading: "07 — Circulation & Support",
+        body: "The lift and stair core is treated as its own set piece, in book-matched stone and bronze-finished panelling with a floating timber-clad stair, so the vertical circulation between the villa's formal and private levels feels considered rather than incidental. A home office off the garage level, anchored by a sculptural stone-clad desk, completes the villa's support spaces.",
+        images: [
+          img("corte-vetro-villa", "09.jpg", 1600, 1600, "Lift and staircase core at Corte Vetro Villa in book-matched stone and bronze-finished panelling", "Lift & staircase"),
+          img("corte-vetro-villa", "24.jpg", 1600, 1600, "Home office off the garage level at Corte Vetro Villa with a sculptural stone-clad desk", "Garage-level home office"),
+        ],
       },
       {
         heading: "My Contribution",

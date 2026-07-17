@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-canvas">
+    <footer className="bg-charcoal text-canvas">
       <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 lg:px-16 lg:py-28">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr]">
           <div>
