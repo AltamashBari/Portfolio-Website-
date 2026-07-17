@@ -35,6 +35,12 @@ export interface ProjectImage {
 export interface StoryBlock {
   heading?: string;
   body: string;
+  /**
+   * Optional set of images for this block. When present, the block renders
+   * as a multi-image "chapter" (area grid) instead of pairing 1:1 with a
+   * single gallery image by position.
+   */
+  images?: ProjectImage[];
 }
 
 export interface ProjectSpec {
@@ -79,6 +85,10 @@ export interface Stat {
   value: string;
   suffix?: string;
   label: string;
+  /** Short bold caps micro-label, e.g. "PROJECTS LED". */
+  tag?: string;
+  /** Separate descriptive sentence shown beneath the tag. */
+  description?: string;
 }
 
 export interface Certification {
