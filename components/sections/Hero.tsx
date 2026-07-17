@@ -1,31 +1,19 @@
-import { ParallaxImage } from "@/components/motion/ParallaxImage";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { Reveal } from "@/components/motion/Reveal";
-import { FloatingWorkCards } from "@/components/motion/FloatingWorkCards";
+import { HeroBackgroundDrift } from "@/components/motion/HeroBackgroundDrift";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] w-full overflow-hidden">
-      <div className="absolute inset-0">
-        <ParallaxImage
-          src="/portfolio/monte-south/cover.jpg"
-          alt="Monte South twin residential towers rising above a landscaped podium in South Mumbai"
-          priority
-          sizes="100vw"
-          strength={80}
-          className="h-full w-full"
-        />
-      </div>
+      <HeroBackgroundDrift />
 
       {/* Scrim for legible light text over the render */}
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/40"
       />
-
-      <FloatingWorkCards />
 
       <Container className="relative flex min-h-[100dvh] flex-col justify-end pb-16 pt-24 md:pb-24">
         <div className="max-w-4xl">
