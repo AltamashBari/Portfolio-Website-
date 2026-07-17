@@ -1,6 +1,7 @@
 import { ParallaxImage } from "@/components/motion/ParallaxImage";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { Reveal } from "@/components/motion/Reveal";
+import { FloatingWorkCards } from "@/components/motion/FloatingWorkCards";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
@@ -23,6 +24,8 @@ export function Hero() {
         aria-hidden
         className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/40"
       />
+
+      <FloatingWorkCards />
 
       <Container className="relative flex min-h-[100dvh] flex-col justify-end pb-16 pt-24 md:pb-24">
         <div className="max-w-4xl">
