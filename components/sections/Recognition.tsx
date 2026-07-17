@@ -19,6 +19,13 @@ export function Recognition() {
                 Worked on Monte South, a winner of Best Residential High-Rise Development at the
                 Asia Pacific Property Awards, inside one of India&rsquo;s most prolific practices.
               </blockquote>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-brown">
+                That grounding carried into Dubai, where he now leads architectural and façade BIM
+                delivery on landmark developments including the Sheikh Zayed Museum, Expo City&rsquo;s
+                Sky and Mangrove Residences, and Bristol Towers. His practice spans institutional and
+                transit competition work, award-winning residential towers, and interior architecture,
+                most recently a full residential fit-out in Qatar.
+              </p>
               <p className="mt-8 border-t border-stone/80 pt-6 text-brown">{profile.degree}</p>
             </Reveal>
           </div>
