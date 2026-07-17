@@ -18,7 +18,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <section className="bg-ink pb-20 pt-40 text-canvas md:pb-28 md:pt-48">
+      <section className="bg-charcoal pb-20 pt-40 text-canvas md:pb-28 md:pt-48">
         <Container>
           <Reveal>
             <p className="label-eyebrow text-canvas/60">Selected works</p>
