@@ -22,12 +22,17 @@ interface FloatingRowProps {
 /** Minimum pointer travel, in px, before a press is treated as a drag rather than a click. */
 const DRAG_THRESHOLD = 6;
 
+/** How long to keep the drift paused after a drag/swipe gesture ends. */
+const RESUME_DELAY = 1200;
+
 /**
  * A horizontally drifting, seamlessly looping strip of project cards -
  * the "Selected Works" floating gallery. Pauses on hover/focus, scrubs with
- * mouse drag, and falls back to a plain swipeable/scrollable row under
- * prefers-reduced-motion, on coarse-pointer (touch) devices, or when there
- * is only a single project (a looped single card would just look broken).
+ * mouse or touch drag, and falls back to a plain swipeable/scrollable row
+ * only under prefers-reduced-motion or when there is only a single project
+ * (a looped single card would just look broken). Runs on touch devices too:
+ * `touch-action: pan-y` lets vertical page scroll pass through untouched
+ * while horizontal drag is handled here.
  */
 export function FloatingRow({
   index = 1,
@@ -39,7 +44,6 @@ export function FloatingRow({
   numbered = true,
 }: FloatingRowProps) {
   const reduce = useReducedMotion();
-  const [isCoarse, setIsCoarse] = useState(false);
   const [ready, setReady] = useState(false);
 
   const trackRef = useRef<HTMLDivElement>(null);
@@ -51,21 +55,19 @@ export function FloatingRow({
   const dragStartX = useRef(0);
   const dragStartValue = useRef(0);
   const pointerId = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (!window.matchMedia) return;
-    const mq = window.matchMedia("(pointer: coarse)");
-    setIsCoarse(mq.matches);
-    const onChange = () => setIsCoarse(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (!trackRef.current) return;
     halfWidth.current = trackRef.current.scrollWidth / 2;
     setReady(true);
   }, [projects]);
+
+  useEffect(() => {
+    return () => {
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
+    };
+  }, []);
 
   const dir = direction === "left" ? -1 : 1;
 
@@ -77,7 +79,14 @@ export function FloatingRow({
     x.set(next);
   });
 
-  const staticFallback = reduce || isCoarse || projects.length <= 1;
+  const staticFallback = reduce || projects.length <= 1;
+
+  function clearResumeTimer() {
+    if (resumeTimer.current) {
+      clearTimeout(resumeTimer.current);
+      resumeTimer.current = null;
+    }
+  }
 
   // Pointer handling distinguishes a click (no capture, lets the underlying
   // Link navigate normally) from a drag (only engaged once the pointer has
@@ -86,6 +95,7 @@ export function FloatingRow({
   // press previously broke plain clicks on the cards.
   function onPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
     if (staticFallback) return;
+    clearResumeTimer();
     pressed.current = true;
     dragging.current = false;
     dragStartX.current = e.clientX;
@@ -112,10 +122,23 @@ export function FloatingRow({
     x.set(next);
   }
 
+  // After a real drag/swipe, keep the drift paused briefly so the row
+  // doesn't lurch back into motion the instant a thumb lifts off - then
+  // resume automatically. A plain hover-leave (no drag) resumes instantly.
   function endDrag() {
+    const wasDragging = dragging.current;
     pressed.current = false;
     dragging.current = false;
-    paused.current = false;
+
+    if (wasDragging) {
+      clearResumeTimer();
+      resumeTimer.current = setTimeout(() => {
+        paused.current = false;
+        resumeTimer.current = null;
+      }, RESUME_DELAY);
+    } else {
+      paused.current = false;
+    }
   }
 
   return (
@@ -142,13 +165,15 @@ export function FloatingRow({
         <div
           className="relative overflow-hidden"
           onPointerEnter={() => {
+            clearResumeTimer();
             paused.current = true;
           }}
           onPointerLeave={() => {
-            paused.current = false;
+            if (!dragging.current) paused.current = false;
             endDrag();
           }}
           onFocusCapture={() => {
+            clearResumeTimer();
             paused.current = true;
           }}
           onBlurCapture={(e) => {
@@ -158,7 +183,7 @@ export function FloatingRow({
           <motion.div
             ref={trackRef}
             className="flex cursor-grab gap-6 px-6 active:cursor-grabbing md:px-10 lg:gap-8 lg:px-16"
-            style={{ x, opacity: ready ? 1 : 0 }}
+            style={{ x, opacity: ready ? 1 : 0, touchAction: "pan-y" }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={endDrag}
