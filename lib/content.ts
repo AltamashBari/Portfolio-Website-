@@ -153,6 +153,16 @@ export const stats: Stat[] = [
 
 export const certifications: Certification[] = [
   {
+    title: "Autodesk Certified Professional: Revit",
+    organisation: "Autodesk",
+    year: "2024",
+  },
+  {
+    title: "Autodesk Certified Professional: Navisworks",
+    organisation: "Autodesk",
+    year: "2024",
+  },
+  {
     title: "BIM Architecture Professional Course",
     organisation: "Remote",
     year: "2024",
