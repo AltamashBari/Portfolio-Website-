@@ -25,7 +25,7 @@ export const profile = {
     "Architect designing healthcare, transit, and skylines where clarity, climate, and human experience meet.",
   // Longer intro used in the About section.
   intro:
-    "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and façade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
+    "Altamash Bari is a BIM Architect and Architectural Designer with 4+ years across high-rise residential and commercial work in India and the UAE. Based in Dubai, he currently leads architectural and fa\u00e7ade BIM delivery on landmark projects, including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers.",
   email: "Barialt0786@gmail.com",
   phoneUAE: "+971 56 830 4363",
   linkedin: "https://www.linkedin.com/in/altamash-bari-2b7733201",
@@ -80,22 +80,27 @@ export const capabilities: Capability[] = [
     description:
       "Revit and BIM 360 coordination with Lumion renders that let clients read a space before it is built.",
   },
+  {
+    title: "Dynamo & Scripting",
+    description:
+      "Custom Revit add-ins and Dynamo graphs that automate repetitive modelling and turn manual routines into smart, repeatable workflows.",
+  },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "BIM Specialist | Architecture & Façade Lead",
+    role: "BIM Specialist | Architecture & Fa\u00e7ade Lead",
     organisation: "iRivet Software House",
     location: "Dubai, UAE",
-    period: "2025 — Present",
+    period: "2025 \u2014 Present",
     detail:
-      "Leading architectural and façade BIM delivery to LOD400 across landmark developments including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers, running clash detection, IFC coordination and RFI resolution across teams of 10 to 14 while mentoring junior modellers.",
+      "Leading architectural and fa\u00e7ade BIM delivery to LOD400 across landmark developments including the Sheikh Zayed Museum, Expo City's Sky and Mangrove Residences, and Bristol Towers, running clash detection, IFC coordination and RFI resolution across teams of 10 to 14 while mentoring junior modellers.",
   },
   {
     role: "Architectural Designer | Project Coordinator",
     organisation: "Emissive Interiors & Fit-Out",
     location: "Dubai, UAE",
-    period: "2024 — 2025",
+    period: "2024 \u2014 2025",
     detail:
       "Delivered interior and fit-out packages from concept through to shop drawings, coordinating MEP, running site inspections and snag lists, and preparing material boards and authority submissions across Dubai Municipality, Trakhees, DDA and Civil Defence, alongside client-facing presentations.",
   },
@@ -103,7 +108,7 @@ export const experience: ExperienceItem[] = [
     role: "Architectural Assistant",
     organisation: "Architect Hafeez Contractor",
     location: "Mumbai, India",
-    period: "2023 — 2024",
+    period: "2023 \u2014 2024",
     detail:
       "Produced working drawings, joinery details, GFC sets and 3D visuals inside one of India's most prolific practices, coordinating structural and MEP inputs, area and cost estimates, and authority submission drawings on major residential developments.",
   },
@@ -111,9 +116,9 @@ export const experience: ExperienceItem[] = [
     role: "Freelance & Remote Architectural Designer",
     organisation: "Independent Practice",
     location: "India",
-    period: "2020 — 2023",
+    period: "2020 \u2014 2023",
     detail:
-      "Delivered four independent commissions end to end ahead of formal practice: a full residential interior in Gomtinagar, a street-facing façade redesign in Jankipuram, a residential interior in Abubakar Nagar, Deoria, and row-housing and plotting layouts in partnership with Narayan Group — building a practical, client-facing design foundation from the ground up.",
+      "Delivered four independent commissions end to end ahead of formal practice: a full residential interior in Gomtinagar, a street-facing fa\u00e7ade redesign in Jankipuram, a residential interior in Abubakar Nagar, Deoria, and row-housing and plotting layouts in partnership with Narayan Group \u2014 building a practical, client-facing design foundation from the ground up.",
   },
 ];
 
