@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   AnimatePresence,
@@ -15,8 +16,10 @@ import { navItems, profile } from "@/lib/content";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeHash, setActiveHash] = useState("");
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollY, "change", (v) => {
     setScrolled(v > 24);
@@ -28,6 +31,30 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  // Scroll-spy: highlights the nav item for whichever homepage section is
+  // currently most in view. No-op on routes that don't have these sections
+  // (e.g. /projects/[slug]) since querySelector simply finds nothing there.
+  useEffect(() => {
+    if (pathname !== "/" || typeof window === "undefined") return;
+    const ids = navItems.map((item) => item.href.split("#")[1]).filter(Boolean) as string[];
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActiveHash(visible[0].target.id);
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const onDark = !scrolled && !open;
 
@@ -50,7 +77,7 @@ export function Header() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className={`text-sm font-medium uppercase tracking-[0.2em] transition-colors ${
+          className={`text-sm font-medium uppercase tracking-[0.2em] transition-all duration-300 hover:tracking-[0.28em] ${
             onDark ? "text-canvas" : "text-ink"
           }`}
         >
@@ -59,19 +86,31 @@ export function Header() {
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-9">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`group relative text-sm transition-colors ${
-                    onDark ? "text-canvas/85 hover:text-canvas" : "text-ink/70 hover:text-ink"
-                  }`}
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-olive transition-all duration-300 group-hover:w-full" />
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === "/" && activeHash === item.href.split("#")[1];
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`group relative text-sm transition-all duration-300 hover:tracking-[0.02em] ${
+                      isActive
+                        ? "text-olive"
+                        : onDark
+                          ? "text-canvas/85 hover:text-canvas"
+                          : "text-ink/70 hover:text-ink"
+                    }`}
+                  >
+                    {item.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-px bg-olive transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
