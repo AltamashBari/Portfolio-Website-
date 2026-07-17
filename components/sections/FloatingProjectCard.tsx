@@ -30,7 +30,7 @@ export function FloatingProjectCard({ project, priority = false }: FloatingProje
           sizes="(max-width: 640px) 78vw, (max-width: 1024px) 320px, 380px"
           priority={priority}
           draggable={false}
-          className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform group-hover:scale-[1.05]"
+          className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
         />
       </div>
 
