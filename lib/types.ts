@@ -3,7 +3,7 @@
  * Display content is authored in lib/projects.ts and lib/content.ts.
  */
 
-export type ProjectStatus = "Completed" | "In Progress" | "Concept" | "Design Development";
+export type ProjectStatus = "Completed" | "In Progress" | "Concept" | "Design Development" | "Design Development & Construction";
 
 export type ProjectCategory =
   | "Institutional"
