@@ -1,11 +1,11 @@
 import type { Project, ProjectImage } from "./types";
 
 /*
-ALTAMASH BARI — selected works.
-----------------------------------------------------------------------------
-Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
-numbered sheets (01.jpg ...) are the presentation sheets shown in the case
-study. To update a project, edit its object and drop new files in its folder.
+  ALTAMASH BARI — selected works.
+  ----------------------------------------------------------------------------
+  Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
+  numbered sheets (01.jpg ...) are the presentation sheets shown in the case
+  study. To update a project, edit its object and drop new files in its folder.
 */
 
 function img(
