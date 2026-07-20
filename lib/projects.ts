@@ -420,7 +420,7 @@ export const projects: Project[] = [
     year: "2026",
     status: "Design Development & Construction",
     workType: "Interior",
-    featured: false,
+    featured: true,
     summary:
       "A three-level family residence in Lucknow with a neoclassical facade, generous ensuite bedrooms, and a rooftop gym and terrace.",
     intro:
