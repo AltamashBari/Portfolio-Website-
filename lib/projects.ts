@@ -1,11 +1,11 @@
 import type { Project, ProjectImage } from "./types";
 
 /*
-  ALTAMASH BARI — selected works.
-  ----------------------------------------------------------------------------
-  Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
-  numbered sheets (01.jpg ...) are the presentation sheets shown in the case
-  study. To update a project, edit its object and drop new files in its folder.
+ALTAMASH BARI — selected works.
+----------------------------------------------------------------------------
+Images live in /public/portfolio/{folder}/. `cover.jpg` is the hero render;
+numbered sheets (01.jpg ...) are the presentation sheets shown in the case
+study. To update a project, edit its object and drop new files in its folder.
 */
 
 function img(
@@ -410,6 +410,80 @@ export const projects: Project[] = [
       { label: "Client", value: "Salem Al-Ghanim" },
       { label: "Status", value: "Completed" },
       { label: "Role", value: "Kayan, with architect Bashar A. Al-Salem" },
+    ],
+  },
+  {
+    slug: "irfan-khan-residence",
+    title: "Dr. Irfan Khan Residence",
+    category: "Interior",
+    location: "Lucknow, U.P.",
+    year: "2026",
+    status: "Design Development & Construction",
+    workType: "Interior",
+    featured: false,
+    summary:
+      "A three-level family residence in Lucknow with a neoclassical facade, generous ensuite bedrooms, and a rooftop gym and terrace.",
+    intro:
+      "Dr. Irfan Khan Residence is a private family home in Lucknow, Uttar Pradesh, planned across three levels around a formal neoclassical elevation. Altamash led the architectural design and space planning, developing the facade language, floor plans and room layouts from early concept through design development and into construction.",
+    cover: img(
+      "irfan-khan-residence",
+      "cover.jpg",
+      1536,
+      1024,
+      "Three-quarter exterior view of the Dr. Irfan Khan Residence in Lucknow, showing the arched entrance bay, columned balcony and wrought-iron gate",
+    ),
+    gallery: [],
+    story: [
+      {
+        heading: "Overview",
+        body: "Dr. Irfan Khan Residence is a private family home in Lucknow, planned across a ground floor and two upper levels around a single, formally composed neoclassical elevation. Below is an overview of the house's exterior treatment and its three floors, arranged from the shared and formal rooms at ground level up to a private wellness floor and terrace at the top.",
+      },
+      {
+        heading: "01 — Exterior & Facade",
+        body: "The elevation is treated in a restrained neoclassical language: rendered stucco walls, a projecting arched bay at the entrance flanked by paired columns, and deep cornice mouldings that wrap the building beneath a dark tiled hip roof. Wrought-iron gates and balustrades, planted balconies at every level, and a landscaped forecourt soften the formality of the facade and announce the house from the street.",
+        images: [
+          img("irfan-khan-residence", "01.jpg", 1555, 1012, "Frontal elevation of the Dr. Irfan Khan Residence with a central arched window, classical cornice detailing and a landscaped forecourt", "Front elevation"),
+          img("irfan-khan-residence", "02.jpg", 1537, 1023, "Angled exterior view of the Dr. Irfan Khan Residence showing the layered hip roofs and balconies across three levels", "Angled exterior view"),
+          img("irfan-khan-residence", "03.jpg", 1578, 997, "Daytime exterior view of the Dr. Irfan Khan Residence with the driveway, entrance gate and perimeter planting", "Driveway & entrance gate"),
+          img("irfan-khan-residence", "04.jpg", 1254, 1254, "Close-up of the arched central bay at the Dr. Irfan Khan Residence, with carved stucco reliefs, paired columns and a planted balcony", "Entrance bay detail"),
+        ],
+      },
+      {
+        heading: "02 — Ground Floor: Living & Reception",
+        body: "The ground floor holds the house's shared and formal spaces: a drawing room and dining area open toward a rear lawn and deck, with the kitchen, utility and store rooms arranged along the service side. A staff quarter with its own toilet sits off the entrance lobby, keeping day-to-day support separate from family life, alongside a private bedroom suite with its own dressing area and bathroom.",
+        images: [
+          img("irfan-khan-residence", "05.jpg", 1517, 1037, "Furnished ground floor plan of the Dr. Irfan Khan Residence, showing the drawing room, dining area, kitchen, staff quarter and rear lawn", "Ground floor plan"),
+        ],
+      },
+      {
+        heading: "03 — First Floor: Private Wing",
+        body: "Three family bedrooms, each with its own dressing area and ensuite bathroom, are arranged around a shared family lounge and a stair core open to the sky above. Balconies of varying widths extend each room outward, and a pantry counter keeps the lounge self-sufficient for everyday family time away from the formal rooms below.",
+        images: [
+          img("irfan-khan-residence", "06.jpg", 1516, 1038, "Furnished first floor plan of the Dr. Irfan Khan Residence, showing three ensuite bedrooms arranged around a shared family lounge", "First floor plan"),
+        ],
+      },
+      {
+        heading: "04 — Second Floor: Wellness & Terrace",
+        body: "The top floor steps back from the family wing into a private bedroom suite and a full multipurpose hall fitted out as a home gym, opening onto a sixty-foot terrace that runs the width of the house. It is the most private level of the home, planned for exercise, quiet mornings and open-air evenings above the rest of the house.",
+        images: [
+          img("irfan-khan-residence", "07.jpg", 1515, 1038, "Furnished second floor plan of the Dr. Irfan Khan Residence, showing a private bedroom suite, multipurpose gym hall and terrace", "Second floor & terrace plan"),
+        ],
+      },
+      {
+        heading: "My Contribution",
+        body: "Altamash led the architectural design and space planning for Dr. Irfan Khan Residence, developing the facade elevation, floor plans and room layouts from early concept through design development and into construction, for a private family client in Lucknow.",
+      },
+      {
+        heading: "Sources & Credits",
+        body: "Dr. Irfan Khan Residence, Lucknow, Uttar Pradesh, for a private family client. The elevation renders and furnished floor plans shown are original visualisation and planning work produced for the project.",
+      },
+    ],
+    specs: [
+      { label: "Type", value: "Residential Villa" },
+      { label: "Location", value: "Lucknow, U.P." },
+      { label: "Client", value: "Dr. Irfan Khan" },
+      { label: "Status", value: "Design Development & Construction" },
+      { label: "Levels", value: "Ground + 2 upper floors" },
     ],
   },
   {
