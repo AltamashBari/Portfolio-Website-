@@ -303,7 +303,7 @@ export const projects: Project[] = [
     year: "2026",
     status: "Completed",
     workType: "Interior",
-    featured: false,
+    featured: true,
     summary:
       "A private residence in Alshamal, Qatar, organised into seven distinct areas — reception, family living, the master suite, children's and guest wings, wellness, and circulation — held together by walnut, travertine and brass.",
     intro:
