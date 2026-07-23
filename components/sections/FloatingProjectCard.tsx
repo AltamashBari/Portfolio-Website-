@@ -1,10 +1,10 @@
 "use client";
 
-import { startTransition, type MouseEvent as ReactMouseEvent } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { useViewTransitionNavigate } from "@/components/motion/ViewTransitionProvider";
 import type { Project } from "@/lib/types";
 
 interface FloatingProjectCardProps {
@@ -28,21 +28,18 @@ interface FloatingProjectCardProps {
  * and the "View Project" cue are always visible - never hover-gated - so
  * keyboard and touch users get full information without a hover state.
  *
- * Next.js's <Link> performs a same-document client-side navigation (no full
- * page load), so the browser's declarative cross-document view-transition
- * CSS never fires here on its own. When this card carries a
- * viewTransitionName, the click is instead routed through the imperative
- * document.startViewTransition() API so the cover image morphs into the
- * case study hero. Falls back to a plain Link navigation on browsers
- * without View Transitions support, modified clicks (new tab/window), and
- * non-primary-button clicks.
+ * When this card carries a viewTransitionName, the click is routed through
+ * useViewTransitionNavigate() (see ViewTransitionProvider) so the cover
+ * image morphs into the case study hero via the browser's View Transitions
+ * API. Falls back to a plain Link navigation on browsers without support,
+ * modified clicks (new tab/window), and non-primary-button clicks.
  */
 export function FloatingProjectCard({
   project,
   priority = false,
   viewTransitionName,
 }: FloatingProjectCardProps) {
-  const router = useRouter();
+  const navigate = useViewTransitionNavigate();
   const href = `/projects/${project.slug}`;
 
   function handleClick(e: ReactMouseEvent<HTMLAnchorElement>) {
@@ -53,34 +50,12 @@ export function FloatingProjectCard({
       e.metaKey ||
       e.ctrlKey ||
       e.shiftKey ||
-      e.altKey ||
-      typeof document === "undefined" ||
-      !("startViewTransition" in document)
+      e.altKey
     ) {
       return;
     }
     e.preventDefault();
-    const transition = (
-      document as unknown as {
-        startViewTransition: (cb: () => void) => {
-          ready: Promise<void>;
-          finished: Promise<void>;
-        };
-      }
-    ).startViewTransition(() => {
-      startTransition(() => {
-        router.push(href);
-      });
-    });
-    // Next.js's route data can resolve asynchronously after this callback
-    // returns, so the browser can abort the transition once the real DOM
-    // update lands after it already captured the "after" snapshot. That's
-    // an expected, harmless race under a client-side router - swallow it so
-    // it never surfaces as an unhandled rejection. The navigation itself
-    // already happened via router.push above regardless of transition
-    // outcome.
-    transition?.ready?.catch(() => {});
-    transition?.finished?.catch(() => {});
+    navigate(href);
   }
 
   return (
