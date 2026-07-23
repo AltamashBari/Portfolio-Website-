@@ -6,6 +6,15 @@ import type { Project } from "@/lib/types";
 interface FloatingProjectCardProps {
   project: Project;
   priority?: boolean;
+  /**
+   * Enables the card image -> case study hero shared-element transition
+   * (View Transitions API). Only ever pass this for a single rendered
+   * instance of a given project per page - FloatingRow's looping marquee
+   * renders each card twice for a seamless loop, so it only forwards this
+   * for the first (non-duplicated) copy to keep view-transition-name
+   * unique document-wide, as the spec requires.
+   */
+  viewTransitionName?: string;
 }
 
 /**
@@ -15,14 +24,21 @@ interface FloatingProjectCardProps {
  * and the "View Project" cue are always visible - never hover-gated - so
  * keyboard and touch users get full information without a hover state.
  */
-export function FloatingProjectCard({ project, priority = false }: FloatingProjectCardProps) {
+export function FloatingProjectCard({
+  project,
+  priority = false,
+  viewTransitionName,
+}: FloatingProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
       className="group block w-[78vw] shrink-0 select-none sm:w-[320px] lg:w-[380px]"
       draggable={false}
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-sand transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)]">
+      <div
+        className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-sand transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)]"
+        style={viewTransitionName ? ({ viewTransitionName } as React.CSSProperties) : undefined}
+      >
         <Image
           src={project.cover.src}
           alt={project.cover.alt}
