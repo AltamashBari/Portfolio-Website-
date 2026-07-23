@@ -1,5 +1,9 @@
+"use client";
+
+import type { MouseEvent as ReactMouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/lib/types";
 
@@ -23,15 +27,50 @@ interface FloatingProjectCardProps {
  * rows of cards drift and loop predictably. Title, year, location, category
  * and the "View Project" cue are always visible - never hover-gated - so
  * keyboard and touch users get full information without a hover state.
+ *
+ * Next.js's <Link> performs a same-document client-side navigation (no full
+ * page load), so the browser's declarative cross-document view-transition
+ * CSS never fires here on its own. When this card carries a
+ * viewTransitionName, the click is instead routed through the imperative
+ * document.startViewTransition() API so the cover image morphs into the
+ * case study hero. Falls back to a plain Link navigation on browsers
+ * without View Transitions support, modified clicks (new tab/window), and
+ * non-primary-button clicks.
  */
 export function FloatingProjectCard({
   project,
   priority = false,
   viewTransitionName,
 }: FloatingProjectCardProps) {
+  const router = useRouter();
+  const href = `/projects/${project.slug}`;
+
+  function handleClick(e: ReactMouseEvent<HTMLAnchorElement>) {
+    if (
+      !viewTransitionName ||
+      e.defaultPrevented ||
+      e.button !== 0 ||
+      e.metaKey ||
+      e.ctrlKey ||
+      e.shiftKey ||
+      e.altKey ||
+      typeof document === "undefined" ||
+      !("startViewTransition" in document)
+    ) {
+      return;
+    }
+    e.preventDefault();
+    (document as unknown as { startViewTransition: (cb: () => void) => void }).startViewTransition(
+      () => {
+        router.push(href);
+      },
+    );
+  }
+
   return (
     <Link
-      href={`/projects/${project.slug}`}
+      href={href}
+      onClick={handleClick}
       className="group block w-[78vw] shrink-0 select-none sm:w-[320px] lg:w-[380px]"
       draggable={false}
     >
