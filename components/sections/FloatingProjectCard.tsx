@@ -1,11 +1,24 @@
+"use client";
+
+import type { MouseEvent as ReactMouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { useViewTransitionNavigate } from "@/components/motion/ViewTransitionProvider";
 import type { Project } from "@/lib/types";
 
 interface FloatingProjectCardProps {
   project: Project;
   priority?: boolean;
+  /**
+   * Enables the card image -> case study hero shared-element transition
+   * (View Transitions API). Only ever pass this for a single rendered
+   * instance of a given project per page - FloatingRow's looping marquee
+   * renders each card twice for a seamless loop, so it only forwards this
+   * for the first (non-duplicated) copy to keep view-transition-name
+   * unique document-wide, as the spec requires.
+   */
+  viewTransitionName?: string;
 }
 
 /**
@@ -14,15 +27,48 @@ interface FloatingProjectCardProps {
  * rows of cards drift and loop predictably. Title, year, location, category
  * and the "View Project" cue are always visible - never hover-gated - so
  * keyboard and touch users get full information without a hover state.
+ *
+ * When this card carries a viewTransitionName, the click is routed through
+ * useViewTransitionNavigate() (see ViewTransitionProvider) so the cover
+ * image morphs into the case study hero via the browser's View Transitions
+ * API. Falls back to a plain Link navigation on browsers without support,
+ * modified clicks (new tab/window), and non-primary-button clicks.
  */
-export function FloatingProjectCard({ project, priority = false }: FloatingProjectCardProps) {
+export function FloatingProjectCard({
+  project,
+  priority = false,
+  viewTransitionName,
+}: FloatingProjectCardProps) {
+  const navigate = useViewTransitionNavigate();
+  const href = `/projects/${project.slug}`;
+
+  function handleClick(e: ReactMouseEvent<HTMLAnchorElement>) {
+    if (
+      !viewTransitionName ||
+      e.defaultPrevented ||
+      e.button !== 0 ||
+      e.metaKey ||
+      e.ctrlKey ||
+      e.shiftKey ||
+      e.altKey
+    ) {
+      return;
+    }
+    e.preventDefault();
+    navigate(href);
+  }
+
   return (
     <Link
-      href={`/projects/${project.slug}`}
+      href={href}
+      onClick={handleClick}
       className="group block w-[78vw] shrink-0 select-none sm:w-[320px] lg:w-[380px]"
       draggable={false}
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-sand transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)]">
+      <div
+        className="relative aspect-[4/5] overflow-hidden rounded-[2px] bg-sand transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1 group-hover:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)] group-focus-visible:-translate-y-1 group-focus-visible:shadow-[0_20px_44px_-18px_rgba(32,29,24,0.4)]"
+        style={viewTransitionName ? ({ viewTransitionName } as React.CSSProperties) : undefined}
+      >
         <Image
           src={project.cover.src}
           alt={project.cover.alt}
