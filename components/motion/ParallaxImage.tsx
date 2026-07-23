@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 
 interface ParallaxImageProps {
   src: string;
@@ -12,6 +12,8 @@ interface ParallaxImageProps {
   className?: string;
   /** Max vertical travel in px (image is oversized to stay covered). */
   strength?: number;
+  /** Extra inline styles merged onto the outer crop container (e.g. viewTransitionName). */
+  style?: CSSProperties;
 }
 
 /**
@@ -26,6 +28,7 @@ export function ParallaxImage({
   priority = false,
   className,
   strength = 60,
+  style,
 }: ParallaxImageProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -37,7 +40,11 @@ export function ParallaxImage({
   const y = useTransform(scrollYProgress, [0, 1], [-strength, strength]);
 
   return (
-    <div ref={ref} className={className} style={{ position: "relative", overflow: "hidden" }}>
+    <div
+      ref={ref}
+      className={className}
+      style={{ position: "relative", overflow: "hidden", ...style }}
+    >
       <motion.div
         style={{
           position: "absolute",
