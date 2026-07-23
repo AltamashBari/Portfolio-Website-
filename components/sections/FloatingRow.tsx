@@ -157,7 +157,11 @@ export function FloatingRow({
         >
           {projects.map((project, i) => (
             <div key={project.slug} className="snap-start">
-              <FloatingProjectCard project={project} priority={priority && i === 0} />
+              <FloatingProjectCard
+                project={project}
+                priority={priority && i === 0}
+                viewTransitionName={`project-cover-${project.slug}`}
+              />
             </div>
           ))}
         </div>
@@ -194,6 +198,7 @@ export function FloatingRow({
                 key={`${project.slug}-${i}`}
                 project={project}
                 priority={priority && i === 0}
+                viewTransitionName={i < projects.length ? `project-cover-${project.slug}` : undefined}
               />
             ))}
           </motion.div>
