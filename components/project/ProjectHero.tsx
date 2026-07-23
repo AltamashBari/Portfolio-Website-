@@ -15,6 +15,7 @@ export function ProjectHero({ project }: { project: Project }) {
           sizes="100vw"
           strength={80}
           className="h-full w-full"
+          style={{ viewTransitionName: `project-cover-${project.slug}` } as React.CSSProperties}
         />
       </div>
 
