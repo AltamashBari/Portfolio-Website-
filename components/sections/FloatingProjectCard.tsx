@@ -1,6 +1,6 @@
 "use client";
 
-import type { MouseEvent as ReactMouseEvent } from "react";
+import { startTransition, type MouseEvent as ReactMouseEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -60,11 +60,27 @@ export function FloatingProjectCard({
       return;
     }
     e.preventDefault();
-    (document as unknown as { startViewTransition: (cb: () => void) => void }).startViewTransition(
-      () => {
+    const transition = (
+      document as unknown as {
+        startViewTransition: (cb: () => void) => {
+          ready: Promise<void>;
+          finished: Promise<void>;
+        };
+      }
+    ).startViewTransition(() => {
+      startTransition(() => {
         router.push(href);
-      },
-    );
+      });
+    });
+    // Next.js's route data can resolve asynchronously after this callback
+    // returns, so the browser can abort the transition once the real DOM
+    // update lands after it already captured the "after" snapshot. That's
+    // an expected, harmless race under a client-side router - swallow it so
+    // it never surfaces as an unhandled rejection. The navigation itself
+    // already happened via router.push above regardless of transition
+    // outcome.
+    transition?.ready?.catch(() => {});
+    transition?.finished?.catch(() => {});
   }
 
   return (
