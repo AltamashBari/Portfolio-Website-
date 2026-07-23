@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CustomCursor } from "@/components/motion/CustomCursor";
+import { ViewTransitionProvider } from "@/components/motion/ViewTransitionProvider";
 import { faqs, profile } from "@/lib/content";
 import { faqJsonLd, personJsonLd, SITE_URL } from "@/lib/seo";
 
@@ -89,12 +90,14 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <CustomCursor />
-        <Header />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <ViewTransitionProvider>
+          <CustomCursor />
+          <Header />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </ViewTransitionProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
