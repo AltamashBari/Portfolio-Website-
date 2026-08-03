@@ -645,3 +645,38 @@ export function getAdjacentProjects(slug: string): { prev: Project; next: Projec
   const next = projects[(index + 1) % projects.length];
   return { prev, next };
 }
+
+export interface ProjectYearGroup {
+  /** "2026", "2025", ... or "Earlier Projects" for the trailing bucket. */
+  label: string;
+  projects: Project[];
+}
+
+/**
+ * All projects grouped for the static /projects (All Projects) grid, most
+ * recent year first. The four most recent distinct years each get their own
+ * group so the page reads "2026 / 2025 / 2024 / 2023 / ..."; anything older
+ * is gathered into a trailing "Earlier Projects" group so a long tail of
+ * sparse older years doesn't fragment the page into too many short
+ * sections. Order within a group preserves the curated order projects are
+ * listed in above (not re-sorted alphabetically).
+ */
+export function getProjectsGroupedByYear(): ProjectYearGroup[] {
+  const years = Array.from(new Set(projects.map((p) => p.year))).sort(
+    (a, b) => Number(b) - Number(a),
+  );
+  const recentYears = years.slice(0, 4);
+  const earlierYears = new Set(years.slice(4));
+
+  const groups: ProjectYearGroup[] = recentYears.map((year) => ({
+    label: year,
+    projects: projects.filter((p) => p.year === year),
+  }));
+
+  const earlier = projects.filter((p) => earlierYears.has(p.year));
+  if (earlier.length > 0) {
+    groups.push({ label: "Earlier Projects", projects: earlier });
+  }
+
+  return groups;
+}
