@@ -15,7 +15,7 @@ export function Expertise() {
 
         <div className="mt-14 lg:mt-20">
           {capabilities.map((capability, i) => (
-            <Reveal key={capability.title} delay={i * 0.04}>
+            <Reveal key={capability.title} delay={i * 0.04} x={-32} y={0}>
               <div className="group grid grid-cols-1 gap-2 border-t border-stone/80 py-8 last:border-b md:grid-cols-[4rem_1fr_1.5fr] md:items-baseline md:gap-8 md:py-9">
                 <span className="tabular text-sm text-olive">0{i + 1}</span>
                 <h3 className="font-display text-2xl text-ink transition-colors duration-300 group-hover:text-olive md:text-[1.9rem]">
