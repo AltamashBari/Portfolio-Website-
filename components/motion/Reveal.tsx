@@ -10,18 +10,22 @@ interface RevealProps {
   delay?: number;
   /** Vertical travel in px. */
   y?: number;
+  /** Horizontal travel in px - use for side-entry rows (e.g. list items),
+   * typically paired with y={0}. */
+  x?: number;
   once?: boolean;
 }
 
 /**
- * Slow fade + rise as the element scrolls into view. Degrades to a static,
- * fully-visible element under prefers-reduced-motion.
+ * Slow fade + rise (or slide, if x is set) as the element scrolls into view.
+ * Degrades to a static, fully-visible element under prefers-reduced-motion.
  */
 export function Reveal({
   children,
   className,
   delay = 0,
   y = 24,
+  x = 0,
   once = true,
 }: RevealProps) {
   const reduce = useReducedMotion();
@@ -29,8 +33,8 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={reduce ? false : { opacity: 0, y }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      initial={reduce ? false : { opacity: 0, y, x }}
+      whileInView={reduce ? undefined : { opacity: 1, y: 0, x: 0 }}
       viewport={{ once, amount: 0.15, margin: "0px 0px -8% 0px" }}
       transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
     >
