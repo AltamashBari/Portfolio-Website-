@@ -265,7 +265,7 @@ export const projects: Project[] = [
       "Monte South is an award-winning luxury development near South Mumbai at Byculla, spread across a 12.5-acre plot of the historic Khatau Mills. Four residential towers of 60-plus storeys hold ultra-spacious homes above a podium beach and amazon-themed landscaping. Altamash worked on the project during his time at Architect Hafeez Contractor.",
     cover: img(
       "monte-south",
-      "cover.jpg",
+      "cover-v2.jpg",
       1600,
       1838,
       "Render of the Monte South twin residential towers rising above a landscaped podium in South Mumbai",
@@ -540,7 +540,7 @@ export const projects: Project[] = [
     year: "2026",
     status: "Design Development & Construction",
     workType: "Interior",
-    featured: false,
+    featured: true,
     summary:
       "A room-by-room interior renovation in Lakhimpur unified by one restrained palette of natural timber, brass and soft layered light.",
     intro:
