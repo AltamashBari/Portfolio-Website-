@@ -64,10 +64,9 @@ export const projects: Project[] = [
       },
       {
         heading: "Architecture & Massing",
-        body: "The residential blocks are organised as a cluster of mid- to high-rise towers reaching a maximum height of just over 36 metres above multi-level basements and landscaped podium terraces. At grade, the towers step back to a planted retail promenade that runs toward Al Wasl Plaza, with shaded seating, palm planting and ground-floor retail framing the pedestrian route between blocks.",
+        body: "The residential blocks are organised as a cluster of mid- to high-rise towers reaching a maximum height of just over 36 metres above multi-level basements and landscaped podium terraces. At grade, the towers step back to a planted retail promenade that runs toward Al Wasl Plaza, with shaded seating, palm planting and ground-floor retail framing the pedestrian route between blocks. The reference sheet alongside sets out the project's official name, location and development summary next to the exterior render.",
         images: [
-          img("sky-residences", "06.jpg", 2200, 1464, "Official exterior render of the Sky Residences towers viewed from the landscaped retail promenade at grade", "Exterior render, ground-level promenade"),
-          img("sky-residences", "20.jpg", 2109, 1456, "Isometric BIM view of the development showing colour-coded landscape and amenity zoning", "Site isometric, landscape and amenity zoning"),
+          img("sky-residences", "06.jpg", 1800, 1273, "Sky Residences project reference sheet showing the development summary and official exterior render of the towers from the landscaped promenade", "Project reference sheet"),
         ],
       },
       {
@@ -79,28 +78,16 @@ export const projects: Project[] = [
       },
       {
         heading: "Drawings & Documentation",
-        body: "Construction-stage drawings for the residence block cover the full building height, from Level 01 through Level 14 and a roof level, together with facade skin sections and a typical floor plan showing the residential unit layout. Units are organised as a mix of one- and two-bedroom types arranged around a central corridor, each with private balconies onto the podium or the surrounding towers.",
+        body: "Construction-stage drawings for the residence block cover the full building height, from Level 01 through Level 14 and a roof level, together with facade skin sections and a typical floor plan showing the residential unit layout. Units are organised as a mix of one- and two-bedroom types arranged around a central corridor, each with private balconies onto the podium or the surrounding towers. The federated block view alongside overlays the coordinated MEP and structural systems on the massing.",
         images: [
-          img("sky-residences", "07.jpg", 2200, 1622, "Residence block elevation drawing showing all residential levels from Level 01 to the roof level", "Residence block elevation"),
-          img("sky-residences", "09.jpg", 2200, 890, "Typical residence block floor plan showing one- and two-bedroom unit layouts", "Typical floor plan, residence block"),
-          img("sky-residences", "08.jpg", 1910, 2122, "Facade skin section drawings through the residence block", "Facade skin sections"),
+          img("sky-residences", "08.jpg", 1800, 1273, "Construction documentation sheet showing the residence block elevation, facade skin sections, typical floor plan and a federated block view", "Residence block elevation, skin sections, floor plan and federated view"),
         ],
       },
       {
-        heading: "Unit Design & Interior BIM",
-        body: "A mockup unit (1BR-T03, Unit 107) was modelled and detailed in full for design and client review, from the architectural floor plan and sections through to furniture, fixtures and equipment. Kitchen and wardrobe joinery were modelled as parametric BIM families with real material and hardware information, and the completed unit was reviewed as a furnished isometric model alongside its bedroom and kitchen sections.",
+        heading: "Unit Design & Construction Detailing",
+        body: "A mockup unit (1BR-T03, Unit 107) was modelled and detailed in full for design and client review, from the architectural floor plan and sections through to furniture, fixtures and equipment. Kitchen and wardrobe joinery were modelled as parametric BIM families with real material and hardware information, and the completed unit was reviewed as a furnished isometric model alongside its bedroom and kitchen sections. Interface details on the same sheet were developed to LOD 400 to carry the design through to construction issue, covering wall finish, threshold, floor finish, ceiling cove, wall-to-ceiling and drop-ceiling conditions, with each detail setting out the layered build-up of finishes, substrates and fixings at that junction.",
         images: [
-          img("sky-residences", "11.jpg", 1439, 1971, "Mockup unit floor plan for a one-bedroom apartment (1BR-T03, Unit 107)", "Mockup unit floor plan, 1BR-T03 / Unit 107"),
-          img("sky-residences", "13.jpg", 2200, 1734, "Furnished isometric BIM view of the completed mockup unit", "Mockup unit, furnished isometric view"),
-          img("sky-residences", "12.jpg", 918, 1971, "BIM furniture family models for the mockup unit kitchen and wardrobe joinery", "Kitchen and wardrobe BIM models"),
-          img("sky-residences", "14.jpg", 1439, 1407, "Section drawings through the mockup unit, bedroom and kitchen", "Unit, bedroom and kitchen sections"),
-        ],
-      },
-      {
-        heading: "Construction Detailing",
-        body: "Interface details were developed to LOD 400 to carry the design through to construction issue, covering wall-to-floor, threshold, ceiling cove, wall-to-ceiling and drop-ceiling conditions, with each detail setting out the layered build-up of finishes, substrates and fixings at that junction.",
-        images: [
-          img("sky-residences", "15.jpg", 2200, 910, "Construction interface detail drawings for wall, floor, threshold, ceiling cove and drop-ceiling junctions", "Construction interface details, LOD 400"),
+          img("sky-residences", "09.jpg", 1800, 1273, "Mockup unit sheet showing the 1BR-T03 unit floor plan, kitchen and wardrobe BIM models, furnished isometric view, room sections and LOD 400 construction interface details", "Mockup unit design and construction interface details"),
         ],
       },
       {
@@ -108,16 +95,13 @@ export const projects: Project[] = [
         body: "Coordination at this stage has covered architectural model development and technical review; interface checks between architecture and structure, MEP and landscape; and facade-specific coordination including geometry, openings and slab-edge interfaces with the structural package. Interior design coordination has helped keep fit-out and architectural information aligned as the design has matured toward construction issue.",
         images: [
           img("sky-residences", "04.jpg", 1900, 1344, "Diagram of BIM package coordination and discipline interfaces across AR, FC, ID, ST, MEP and LA", "BIM package & discipline coordination"),
-          img("sky-residences", "16.jpg", 2158, 1737, "Federated BIM model isometric view showing coordinated architecture, structure and MEP systems", "Federated model, isometric coordination view"),
         ],
       },
       {
         heading: "BIM Coordination & Quality Control",
-        body: "Coordination on Sky Residences is tracked through structured BIM deliverables rather than drawings alone: a COBie data export carries level, storey and asset information out of the federated Revit model for handover, and a Uniclass/NRM-classified data sheet maps architectural elements to their construction and facilities-management classification. Clash detection is run in Navisworks across structure, architecture and MEP; the coordination log shown here recorded hundreds of clashes across discipline pairs, each tracked through to resolved status before issue.",
+        body: "Coordination on Sky Residences is tracked through structured BIM deliverables rather than drawings alone: a COBie data export carries level, storey and asset information out of the federated Revit model for handover, and a Master Format data sheet maps architectural elements to Uniclass and NRM classification codes. Clash detection is run in Navisworks across structure, architecture and MEP; the coordination log shown here recorded hundreds of clashes across discipline pairs, each tracked through to resolved status before issue. The federated model isometric and iso views show the coordinated architecture, structure, MEP and landscape overlaid on the massing.",
         images: [
-          img("sky-residences", "17.jpg", 2200, 366, "COBie data export sheet listing building storeys and asset information from the federated Revit model", "COBie data export"),
-          img("sky-residences", "18.jpg", 2200, 841, "Master Format data sheet mapping architectural elements to Uniclass and NRM classification codes", "Uniclass / NRM classification data sheet"),
-          img("sky-residences", "19.jpg", 2200, 1025, "Navisworks clash detection test results log across structural, architectural and MEP disciplines", "Navisworks clash coordination log"),
+          img("sky-residences", "07.jpg", 1800, 1273, "BIM coordination sheet showing the federated model isometric view, COBie data export, Master Format data sheet and Navisworks clash detection results", "Federated model, COBie export, classification data and clash coordination log"),
         ],
       },
       {
@@ -133,7 +117,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Sources & Image Credits",
-        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. The cover render, masterplan aerial and exterior promenade view are official Expo City Dubai marketing images, credited to Expo City Dubai and its design and consultant team. The construction-progress photograph shows the towers under construction as viewed from the public site perimeter. The role-progression, LOD 400 scope and BIM coordination diagrams are original illustrations created for this portfolio. The elevation, floor plan, skin section, unit mockup, construction detail and BIM coordination sheets (COBie export, Uniclass/NRM classification and Navisworks clash log) shown in the Architecture, Drawings, Unit Design, Construction Detailing and BIM Coordination sections are project working drawings and BIM deliverables produced during Altamash's BIM coordination work on Sky Residences, presented here to document the LOD 400 process. The content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
+        body: "Public project information above is drawn from Expo City Dubai's official Sky Residences pages and media releases, and from SSH's project page describing the appointed supervision consultant's scope. The cover render, masterplan aerial and exterior promenade view are official Expo City Dubai marketing images, credited to Expo City Dubai and its design and consultant team. The construction-progress photograph shows the towers under construction as viewed from the public site perimeter. The role-progression, LOD 400 scope and BIM coordination diagrams are original illustrations created for this portfolio. The project reference sheet, drawings and documentation, unit design and construction detailing, and BIM coordination sheets shown above are project reference sheets and BIM deliverables produced during Altamash's BIM coordination work on Sky Residences, presented here to document the LOD 400 process. The content on this page describes Altamash's personal BIM contribution only and does not represent Expo City Dubai or its project team.",
       },
     ],
     specs: [
