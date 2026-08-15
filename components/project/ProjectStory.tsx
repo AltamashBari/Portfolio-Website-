@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import type { Project, ProjectImage, StoryBlock } from "@/lib/types";
+import type { Project, ProjectImage, ProjectSpec, StoryBlock } from "@/lib/types";
 
 /** A presentation sheet shown whole (uncropped) in a framed figure. */
 function Sheet({ image, priority = false }: { image: ProjectImage; priority?: boolean }) {
@@ -67,8 +67,23 @@ function StoryText({ block }: { block: StoryBlock }) {
           <h2 className="mb-4 font-display text-3xl text-ink md:text-4xl">{block.heading}</h2>
         )}
         <p className="text-lg leading-relaxed text-brown/90">{block.body}</p>
+        {block.table && block.table.length > 0 && <StoryTable rows={block.table} />}
       </div>
     </Reveal>
+  );
+}
+
+/** A small two-column data table (e.g. materials & finishes) attached to a story block. */
+function StoryTable({ rows }: { rows: ProjectSpec[] }) {
+  return (
+    <dl className="mx-auto mt-8 max-w-3xl divide-y divide-stone/80 border-t border-stone/80">
+      {rows.map((row) => (
+        <div key={row.label} className="flex flex-col gap-1 py-3 sm:flex-row sm:gap-6">
+          <dt className="w-full shrink-0 text-sm font-medium text-taupe sm:w-40">{row.label}</dt>
+          <dd className="text-sm leading-relaxed text-ink sm:flex-1">{row.value}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 
