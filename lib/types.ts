@@ -41,6 +41,8 @@ export interface StoryBlock {
    * single gallery image by position.
    */
   images?: ProjectImage[];
+  /** Optional two-column data table (e.g. materials & finishes) rendered inside this block. */
+  table?: ProjectSpec[];
 }
 
 export interface ProjectSpec {
