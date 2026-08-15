@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 /*
-  STUDIO SORREL - design tokens
-  Single locked "warm paper" editorial theme (light only, print-emulating).
-  Palette: warm off-white, sand, stone, taupe, deep brown, charcoal, warm ink,
-  and a single muted olive accent used sparingly and consistently page-wide.
+STUDIO SORREL - design tokens
+Single locked "warm paper" editorial theme (light only, print-emulating).
+Palette: warm off-white, sand, stone, taupe, deep brown, charcoal, warm ink,
+and a single muted olive accent used sparingly and consistently page-wide.
 */
 
 @theme {
@@ -31,7 +31,7 @@
 }
 
 /* Fonts are injected by next/font as CSS variables; alias them here so
-   Tailwind generates `font-display` and `font-sans` utilities. */
+Tailwind generates `font-display` and `font-sans` utilities. */
 @theme inline {
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-archivo);
@@ -53,15 +53,33 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Tracking tightens with size, loosens back toward 0 as headings get
+  smaller - a fixed value reads wrong at both ends of the scale (too loose
+  on a 6rem hero line, too tight on a 1.25rem card title). */
   h1,
   h2,
   h3,
   h4 {
     font-family: var(--font-display), ui-serif, Georgia, serif;
     font-weight: 500;
-    letter-spacing: -0.01em;
     /* Balanced rag on multi-line headings (no-op where unsupported). */
     text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    letter-spacing: -0.01em;
+  }
+
+  h4 {
+    letter-spacing: -0.005em;
   }
 
   /* Avoid single-word last lines in body copy (no-op where unsupported). */

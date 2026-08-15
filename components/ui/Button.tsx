@@ -13,8 +13,11 @@ interface ButtonProps {
   className?: string;
 }
 
+// Colors ease over 300ms on hover; the press itself responds immediately
+// (feedback on pointer-down, not on release) with a fast 100ms scale-down
+// so buttons and links never feel inert on tap, where hover doesn't fire.
 const base =
-  "group inline-flex items-center gap-2.5 rounded-[2px] text-sm transition-colors duration-300";
+  "group inline-flex items-center gap-2.5 rounded-[2px] text-sm transition-[background-color,color,transform] duration-300 active:scale-[0.97] active:duration-100";
 
 const variants: Record<Variant, string> = {
   // For light sections

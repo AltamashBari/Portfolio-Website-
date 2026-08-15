@@ -14,6 +14,12 @@ interface FaqItemProps {
  * animated height/opacity expand so opening a question feels considered
  * rather than jarring. Falls back to an instant toggle under
  * prefers-reduced-motion.
+ *
+ * Uses a critically-damped spring (bounce: 0) rather than a fixed-duration
+ * tween: a toggle a user can tap rapidly should carry velocity through a
+ * re-target instead of restarting from zero on every click, and a spring is
+ * what stays interruptible without a jarring "brick wall" on quick re-taps.
+ * No overshoot because the open/close itself carries no gestural momentum.
  */
 export function FaqItem({ question, answer }: FaqItemProps) {
   const [open, setOpen] = useState(false);
@@ -42,7 +48,9 @@ export function FaqItem({ question, answer }: FaqItemProps) {
             initial={reduce ? false : { height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={reduce ? undefined : { height: 0, opacity: 0 }}
-            transition={{ duration: reduce ? 0 : 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={
+              reduce ? { duration: 0 } : { type: "spring", bounce: 0, duration: 0.35 }
+            }
             style={{ overflow: "hidden" }}
           >
             <p className="max-w-2xl pb-7 leading-relaxed text-brown/85">{answer}</p>
