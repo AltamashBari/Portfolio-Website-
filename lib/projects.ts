@@ -548,16 +548,16 @@ export const projects: Project[] = [
     cover: img(
       "mustafa-residence-renovation",
       "01-master-bedroom.jpg",
-      2000,
-      899,
+      1600,
+      718,
       "Rendered view of the master bedroom, the signature space of the Dr. Mustafa Residence Renovation",
     ),
     gallery: [
-      img("mustafa-residence-renovation", "01-master-bedroom.jpg", 2000, 899, "Rendered view of the master bedroom with a channel-tufted oatmeal headboard, fluted oak wardrobe and TV wall, and a walnut-framed window", "Master Bedroom"),
-      img("mustafa-residence-renovation", "02-dressing-wardrobe.jpg", 2000, 899, "Rendered view of the dressing and wardrobe room with a floor-to-ceiling greige wardrobe run, built-in vanity and curved channel-tufted sofa", "Dressing & Wardrobe Room"),
-      img("mustafa-residence-renovation", "03-home-office.jpg", 2000, 899, "Rendered view of the home office with a solid-wood walnut desk, high-back task chair and walnut wall shelving", "Home Office"),
-      img("mustafa-residence-renovation", "04-reading-library.jpg", 2000, 899, "Rendered view of the reading and library corner with walnut display shelving, a backlit niche and a black-steel bookcase", "Reading & Library Corner"),
-      img("mustafa-residence-renovation", "05-modern-kitchen.jpg", 2000, 899, "Rendered view of the galley kitchen with greige cabinetry, gold hardware, fluted glass upper cabinets and integrated appliances", "Modern Galley Kitchen"),
+      img("mustafa-residence-renovation", "01-master-bedroom.jpg", 1600, 718, "Rendered view of the master bedroom with a channel-tufted oatmeal headboard, fluted oak wardrobe and TV wall, and a walnut-framed window", "Master Bedroom"),
+      img("mustafa-residence-renovation", "02-dressing-wardrobe.jpg", 1600, 718, "Rendered view of the dressing and wardrobe room with a floor-to-ceiling greige wardrobe run, built-in vanity and curved channel-tufted sofa", "Dressing & Wardrobe Room"),
+      img("mustafa-residence-renovation", "03-home-office.jpg", 1600, 721, "Rendered view of the home office with a solid-wood walnut desk, high-back task chair and walnut wall shelving", "Home Office"),
+      img("mustafa-residence-renovation", "04-reading-library.jpg", 1600, 718, "Rendered view of the reading and library corner with walnut display shelving, a backlit niche and a black-steel bookcase", "Reading & Library Corner"),
+      img("mustafa-residence-renovation", "05-modern-kitchen.jpg", 1600, 721, "Rendered view of the galley kitchen with greige cabinetry, gold hardware, fluted glass upper cabinets and integrated appliances", "Modern Galley Kitchen"),
     ],
     story: [
       {
@@ -580,7 +580,7 @@ export const projects: Project[] = [
         heading: "Master Bedroom",
         body: "A restful, transitional retreat built on layered warm neutrals and soft texture. A full-height channel-tufted headboard in oatmeal linen sits beneath a textured botanical wallpaper panel framed in PU moulding, lifted off the wall by a concealed cove of warm light. Opposite, a vertically fluted wood-veneer media wall carries the television above a floating oak console lit from beneath. Reeded oak wardrobe and door shutters with slim antique-brass pulls repeat the vertical rhythm, while a grid-mullioned walnut casement dressed in sheer and pinch-pleat drapery frames the greenery outside — keeping the palette deliberately tonal: ivory, oat, walnut and brass.",
         images: [
-          img("mustafa-residence-renovation", "01-master-bedroom.jpg", 2000, 899, "Rendered view of the master bedroom with a channel-tufted oatmeal headboard, fluted oak wardrobe and TV wall, and a walnut-framed window", "Master Bedroom"),
+          img("mustafa-residence-renovation", "01-master-bedroom.jpg", 1600, 718, "Rendered view of the master bedroom with a channel-tufted oatmeal headboard, fluted oak wardrobe and TV wall, and a walnut-framed window", "Master Bedroom"),
         ],
         table: [
           { label: "Walls", value: "Warm ivory low-sheen emulsion; feature wall in framed textured botanical wallpaper within PU cornice moulding" },
@@ -597,7 +597,7 @@ export const projects: Project[] = [
         heading: "Dressing & Wardrobe Room",
         body: "A serene, greige dressing lounge that pairs generous storage with a boutique feel. An uninterrupted floor-to-ceiling wardrobe run in soft greige defines the room, its handleless doors kept clean with slim champagne-toned profiles, while a central fluted bay — traced with a vertical line of concealed light and a toe-kick LED wash — breaks the mass and adds depth. A built-in vanity with a quartz top sits beneath an LED-halo oval mirror, flanked by back-lit display niches, and a curved channel-tufted sofa in mushroom fabric with olive and beige cushions turns the room into a genuine sitting-and-dressing lounge rather than a corridor of cupboards. Brushed-gold accents on the sconce, coffee table and handles warm the greige, and walnut panel doors ground the scheme.",
         images: [
-          img("mustafa-residence-renovation", "02-dressing-wardrobe.jpg", 2000, 899, "Rendered view of the dressing and wardrobe room with a floor-to-ceiling greige wardrobe run, built-in vanity and curved channel-tufted sofa", "Dressing & Wardrobe Room"),
+          img("mustafa-residence-renovation", "02-dressing-wardrobe.jpg", 1600, 718, "Rendered view of the dressing and wardrobe room with a floor-to-ceiling greige wardrobe run, built-in vanity and curved channel-tufted sofa", "Dressing & Wardrobe Room"),
         ],
         table: [
           { label: "Wardrobe Run", value: "Floor-to-ceiling MDF carcass in greige matte laminate; central fluted-MDF accent bay; handleless doors with slim champagne-anodised aluminium profiles" },
@@ -613,7 +613,7 @@ export const projects: Project[] = [
         heading: "Home Office",
         body: "A focused, warm workspace in rich walnut tones, tuned for long hours at the desk. The room trades the lighter neutrals of the bedrooms for deeper, grounding walnut: a solid-wood executive desk with brass cup handles pairs with a high-back ergonomic chair, positioned to draw daylight from the adjacent window without glare on the screen. A zebra dual-roller blind under a chunky timber pelmet lets the user dial daylight up or down through the day, while above the desk a walnut cube shelf and an LED-lit floating shelf carry books and greenery, and a framed cork pinboard keeps references close at hand. Warm downlights and a single articulated task lamp create a pooled, low-glare light that keeps the room feeling like a study rather than an office.",
         images: [
-          img("mustafa-residence-renovation", "03-home-office.jpg", 2000, 899, "Rendered view of the home office with a solid-wood walnut desk, high-back task chair and walnut wall shelving", "Home Office"),
+          img("mustafa-residence-renovation", "03-home-office.jpg", 1600, 721, "Rendered view of the home office with a solid-wood walnut desk, high-back task chair and walnut wall shelving", "Home Office"),
         ],
         table: [
           { label: "Desk & Storage", value: "Executive desk in solid wood + walnut veneer, matte lacquer, with drawer bank and antique-brass cup handles" },
@@ -630,7 +630,7 @@ export const projects: Project[] = [
         heading: "Reading & Library Corner",
         body: "A minimalist library wall where lighting and material do all the decoration. The corner is composed almost entirely from walnut and light: two wall-mounted open display boxes and a long horizontal niche, each with concealed warm-white LED, turn books and a few carefully chosen objects into the room's artwork, while the niche's fluted back panel catches the grazing light for texture. A free-standing shelf on a powder-coated black steel frame introduces a lightly industrial note that keeps the composition from feeling too soft, its fluted-shutter base cabinet echoing joinery used elsewhere in the home. Against ivory walls and a cream tiled floor, the dark timber and black metal read crisp and gallery-like.",
         images: [
-          img("mustafa-residence-renovation", "04-reading-library.jpg", 2000, 899, "Rendered view of the reading and library corner with walnut display shelving, a backlit niche and a black-steel bookcase", "Reading & Library Corner"),
+          img("mustafa-residence-renovation", "04-reading-library.jpg", 1600, 718, "Rendered view of the reading and library corner with walnut display shelving, a backlit niche and a black-steel bookcase", "Reading & Library Corner"),
         ],
         table: [
           { label: "Display Boxes", value: "Wall-mounted walnut open box shelves with concealed warm-white LED interiors" },
@@ -647,7 +647,7 @@ export const projects: Project[] = [
         heading: "Modern Galley Kitchen",
         body: "A compact, hard-working parallel kitchen finished in greige and gold. Planned as an efficient galley, it keeps a tight work-triangle between hob, sink and tall units. Greige matte cabinetry with slim gold profile handles gives a handsome, low-maintenance surface, lifted by upper cabinets in fluted frosted glass within champagne-gold frames that add sparkle without clutter. A cream engineered-quartz counter and a stacked vertical mini-brick backsplash bring subtle pattern, while an under-cabinet LED strip lights the worktop precisely where it's needed. Appliances are fully integrated — a built-in oven-and-microwave tower and a tall refrigerator sit flush within the run — and a black glass hob and chimney provide a grounding contrast, with a high-level ventilator window keeping the compact space fresh and bright.",
         images: [
-          img("mustafa-residence-renovation", "05-modern-kitchen.jpg", 2000, 899, "Rendered view of the galley kitchen with greige cabinetry, gold hardware, fluted glass upper cabinets and integrated appliances", "Modern Galley Kitchen"),
+          img("mustafa-residence-renovation", "05-modern-kitchen.jpg", 1600, 721, "Rendered view of the galley kitchen with greige cabinetry, gold hardware, fluted glass upper cabinets and integrated appliances", "Modern Galley Kitchen"),
         ],
         table: [
           { label: "Base & Wall Units", value: "Moisture-resistant ply carcass with greige matte laminate shutters; upper cabinets in fluted frosted glass set in champagne-gold aluminium frames" },
